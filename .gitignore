@@ -1,0 +1,14 @@
+# the settings of this machine, written by install.sh
+safe.conf
+
+# local files
+.DS_Store
+.claude/settings.local.json
+.env
+_*
+
+# never commit a safe or what is in it
+*.dmg
+*.crypt*
+safe.txt*
+\#*#

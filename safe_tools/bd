@@ -1,0 +1,59 @@
+#!/usr/bin/bash
+# decrypt, read, write, encrypt, clean-up
+# FH 230101, 261024
+
+
+safe_name='safe'
+
+# crypt.sh lives next to this script; run it through sh, so that it works
+# even if it has lost its executable bit
+crypt() { sh "$(dirname "$0")/crypt.sh" "$@"; }
+
+# plain-text copies that emacs left behind in earlier sessions
+for f in "$safe_name.txt~" "#$safe_name.txt#"
+do
+  [ -e "$f" ] && echo "WARNING: $f is a plain-text copy of $safe_name.txt left by emacs. Check it and delete it."
+done
+
+if [ -e $safe_name.txt ]
+then
+  echo "$safe_name.txt exists already, probably left over from an earlier session."
+  echo "Check it, then encrypt it (crypt.sh -e -r $safe_name.txt) or delete it, and rerun bd."
+  exit 1
+fi
+
+crypt -d $safe_name.txt.crypt || exit 1
+
+before=$(sha256sum < $safe_name.txt)
+# no backup (safe.txt~), auto-save (#safe.txt#) or lock files
+emacs -nw --eval '(setq make-backup-files nil auto-save-default nil auto-save-list-file-prefix nil create-lockfiles nil)' $safe_name.txt
+after=$(sha256sum < $safe_name.txt)
+
+if [ "$before" = "$after" ]
+then
+  echo "No changes, removing $safe_name.txt"
+  rm -f $safe_name.txt
+  exit 0
+fi
+
+read -p "$safe_name.txt was changed. Encrypt it? [Y/n] " input_encrypt
+case $input_encrypt in
+  ""|y|Y|yes|Yes)
+    crypt -e -r $safe_name.txt && exit 0
+    echo "WARNING: $safe_name.txt was not encrypted and is still there in plain text."
+    echo "To encrypt it: crypt.sh -e -r $safe_name.txt"
+    exit 1
+    ;;
+esac
+
+read -p "Delete $safe_name.txt and lose the changes? [y/N] " input_delete
+case $input_delete in
+  y|Y|yes|Yes)
+    echo "removing $safe_name.txt"
+    rm -f $safe_name.txt
+    ;;
+  *)
+    echo "WARNING: $safe_name.txt not removed, it is still there in plain text."
+    exit 1
+    ;;
+esac

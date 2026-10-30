@@ -1,0 +1,4 @@
+/* Safe.app, English: the Finder's services (Info.plist, NSServices). */
+"Encrypt with Safe" = "Encrypt with Safe";
+"Open with Safe" = "Open with Safe";
+"Export with Safe" = "Export with Safe";

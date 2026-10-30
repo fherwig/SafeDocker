@@ -1,0 +1,6 @@
+/* Safe.app, Deutsch: what the Finder shows from Info.plist. It follows the language of macOS,
+   not Safe's own setting. */
+"CFBundleName" = "Safe";
+"CFBundleDisplayName" = "Safe";
+/* the document type and the exported type of .crypt files */
+"Encrypted file" = "Verschlüsselte Datei";

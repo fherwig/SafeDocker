@@ -1,0 +1,557 @@
+/* Safe.app, Deutsch. "English" = "Deutsch"; pairs for every key of en.lproj. %@ is a piece of
+   text, %ld a number; %1$@ and %2$@ give their order when German needs another one. Plain German,
+   du as in macOS, the words of macOS (Sichern, Passwort, Volume, Papierkorb). */
+
+/* SafeApp/AppDelegate.swift */
+"“%@”" = "„%@“";
+"Quit and leave %@ open?" = "Beenden und %@ geöffnet lassen?";
+"Files on it are in use, so Safe cannot close it. If you quit now, it stays open until you eject it in the Finder." = "Dateien darauf werden noch benutzt, deshalb kann Safe es nicht schließen. Wenn du jetzt beendest, bleibt es geöffnet, bis du es im Finder auswirfst.";
+"Cancel" = "Abbrechen";
+"Quit Anyway" = "Trotzdem beenden";
+"Choose encrypted files to open." = "Wähle verschlüsselte Dateien zum Öffnen.";
+"Choose files to encrypt. Each original is deleted after its encrypted copy is checked." = "Wähle Dateien zum Verschlüsseln. Jedes Original wird gelöscht, sobald seine verschlüsselte Kopie geprüft ist.";
+"Encrypt" = "Verschlüsseln";
+"Choose encrypted files to export as unencrypted copies." = "Wähle verschlüsselte Dateien, die als unverschlüsselte Kopien exportiert werden sollen.";
+"Export" = "Exportieren";
+"the self-test is still running" = "der Selbsttest läuft noch";
+"Safe will not encrypt or save, because its self-test has not run." = "Safe verschlüsselt und sichert nicht, weil sein Selbsttest nicht gelaufen ist.";
+"Safe will not encrypt or save, because its self-test failed when it started, and it must never write a file it cannot read back. Files that are encrypted already can still be opened and exported. Ask whoever installed Safe to check it with Safe --self-test.\n\nWhat failed: %@" = "Safe verschlüsselt und sichert nicht, weil sein Selbsttest beim Start fehlgeschlagen ist. Safe darf nie eine Datei schreiben, die es nicht zurücklesen kann. Bereits verschlüsselte Dateien lassen sich weiterhin öffnen und exportieren. Bitte die Person, die Safe installiert hat, es mit Safe --self-test zu prüfen.\n\nWas fehlgeschlagen ist: %@";
+"a check failed without a message" = "eine Prüfung ist ohne Meldung fehlgeschlagen";
+"Safe" = "Safe";
+"About Safe" = "Über Safe";
+"Settings..." = "Einstellungen …";
+"Lock Now" = "Jetzt sperren";
+"Hide Safe" = "Safe ausblenden";
+"Hide Others" = "Andere ausblenden";
+"Show All" = "Alle einblenden";
+"Quit Safe" = "Safe beenden";
+"File" = "Ablage";
+"Open..." = "Öffnen …";
+"Encrypt File..." = "Datei verschlüsseln …";
+"Close" = "Schließen";
+"Save" = "Sichern";
+"Export..." = "Exportieren …";
+"Edit" = "Bearbeiten";
+"Undo" = "Widerrufen";
+"Redo" = "Wiederholen";
+"Cut" = "Ausschneiden";
+"Copy" = "Kopieren";
+"Paste" = "Einsetzen";
+"Delete" = "Löschen";
+"Select All" = "Alles auswählen";
+"Find" = "Suchen";
+"Find..." = "Suchen …";
+"Find Next" = "Weitersuchen";
+"Find Previous" = "Weitersuchen (rückwärts)";
+"View" = "Darstellung";
+"Zoom In" = "Vergrößern";
+"Zoom Out" = "Verkleinern";
+"Actual Size" = "Originalgröße";
+"Zoom to Fit" = "Größe an Fenster anpassen";
+"Next Page" = "Nächste Seite";
+"Previous Page" = "Vorherige Seite";
+"Volume" = "Volume";
+"Window" = "Fenster";
+"Minimize" = "Im Dock ablegen";
+"Zoom" = "Zoomen";
+"Volumes" = "Volumes";
+"Bring All to Front" = "Alle nach vorne bringen";
+"Help" = "Hilfe";
+"Safe Help" = "Safe-Hilfe";
+
+/* SafeApp/Editor/ClipboardGuard.swift */
+"macOS may keep what you copy" = "macOS behält möglicherweise, was du kopierst";
+"macOS keeps a clipboard history (Spotlight). Safe marks what it copies as concealed and empties the clipboard after a minute, but it cannot empty that history, which may keep the copied text for hours, outside Safe's encryption. You can switch the history off in System Settings > Spotlight. Safe asks this once each time it starts." = "macOS führt einen Verlauf der Zwischenablage (Spotlight). Safe markiert, was es kopiert, als vertraulich und leert die Zwischenablage nach einer Minute. Den Verlauf kann Safe aber nicht leeren. Er behält den kopierten Text womöglich stundenlang, außerhalb der Verschlüsselung von Safe. Du kannst den Verlauf in Systemeinstellungen > Spotlight ausschalten. Safe fragt dies einmal bei jedem Start.";
+
+/* SafeApp/Editor/EditorViews.swift */
+"Search" = "Suchen";
+"Search this text. Return finds the next match, Shift-Return the one before. What you search for stays in this window (⌘F)." = "Diesen Text durchsuchen. Der Zeilenschalter findet den nächsten Treffer, Umschalt-Zeilenschalter den vorherigen. Dein Suchbegriff bleibt in diesem Fenster (⌘F).";
+"Previous" = "Zurück";
+"Find the previous match (⇧⌘G)." = "Den vorherigen Treffer suchen (⇧⌘G).";
+"Next" = "Weiter";
+"Find the next match (⌘G)." = "Den nächsten Treffer suchen (⌘G).";
+"Done" = "Fertig";
+"Hide the search field (Escape)." = "Das Suchfeld ausblenden (esc).";
+"How often the search text occurs in the text." = "Wie oft der Suchbegriff im Text vorkommt.";
+"Show Text…" = "Text anzeigen …";
+"Locked" = "Gesperrt";
+"%@ has unsaved changes. They are kept, hidden, until you type the file's password." = "„%@“ hat nicht gesicherte Änderungen. Sie bleiben verborgen erhalten, bis du das Passwort der Datei eingibst.";
+"Type the file's password to show the text and your unsaved changes again (Return)." = "Gib das Passwort der Datei ein, um den Text und deine nicht gesicherten Änderungen wieder anzuzeigen (Zeilenschalter).";
+"Allow Editing" = "Bearbeitung zulassen";
+"Warning" = "Warnung";
+"Why the text is shown read only." = "Warum der Text schreibgeschützt angezeigt wird.";
+"Allow changes to the text. Do this only if the text is what you expect: then the password is right." = "Änderungen am Text zulassen. Tu das nur, wenn der Text so aussieht, wie du ihn erwartest: Dann ist das Passwort richtig.";
+
+/* SafeApp/Editor/EditorWindowController.swift */
+"Open Safe Help about the editor." = "Die Safe-Hilfe zum Bearbeiten öffnen.";
+"Safe could not confirm the password, so this is shown read only. If it is what you expect, the password is right." = "Safe konnte das Passwort nicht bestätigen, deshalb wird dies schreibgeschützt angezeigt. Wenn es so aussieht, wie du es erwartest, ist das Passwort richtig.";
+"Not found" = "Nicht gefunden";
+"%ld match" = "%ld Treffer";
+"%ld matches" = "%ld Treffer";
+"%@ was not saved" = "„%@“ wurde nicht gesichert";
+"The folder that holds it, %@, is not there any more. If it is on a volume, the volume was closed: open the volume again, then save. Your changes are still in the window." = "Der Ordner, in dem sie liegt (%@), ist nicht mehr da. Liegt er auf einem Volume, wurde das Volume geschlossen: Öffne das Volume wieder und sichere dann. Deine Änderungen sind noch im Fenster.";
+"%@ cannot be saved in %@" = "„%1$@“ kann nicht in %2$@ gesichert werden";
+"Some characters in the text do not exist in %@, the encoding of this file. Safe can save it in UTF-8 instead; programs that expect %@ may then show some characters wrongly." = "Einige Zeichen im Text gibt es in %1$@, der Codierung dieser Datei, nicht. Safe kann den Text stattdessen in UTF-8 sichern. Programme, die %2$@ erwarten, zeigen dann manche Zeichen womöglich falsch an.";
+"Save as UTF-8" = "Als UTF-8 sichern";
+"The volume “%@” was closed" = "Das Volume „%@“ wurde geschlossen";
+"Safe closed the volume “%@”, which holds %@, when it locked. Open it again at the same place to save your changes; they are still in the window." = "Safe hat das Volume „%1$@“, in dem „%2$@“ liegt, beim Sperren geschlossen. Öffne es am selben Ort wieder, um deine Änderungen zu sichern. Sie sind noch im Fenster.";
+"Open “%@” Again" = "„%@“ wieder öffnen";
+"Not Now" = "Nicht jetzt";
+"%@ changed on disk" = "„%@“ wurde auf dem Datenträger geändert";
+"Another program or another Mac changed the file after you opened it. You can keep your version as a separate encrypted copy next to it, or discard your changes and load the file as it is now." = "Ein anderes Programm oder ein anderer Mac hat die Datei geändert, nachdem du sie geöffnet hast. Du kannst deine Version als eigene verschlüsselte Kopie daneben behalten oder deine Änderungen verwerfen und die Datei so laden, wie sie jetzt ist.";
+"Keep My Version as a Copy" = "Meine Version als Kopie behalten";
+"Discard My Changes" = "Meine Änderungen verwerfen";
+"Your version was not saved" = "Deine Version wurde nicht gesichert";
+"Safe could not confirm the password for the file as it is now." = "Safe konnte das Passwort für die Datei, wie sie jetzt ist, nicht bestätigen.";
+"The file on disk could not be loaded" = "Die Datei auf dem Datenträger konnte nicht geladen werden";
+"Your version is still in the window." = "Deine Version ist noch im Fenster.";
+"Do you want to save the changes to %@?" = "Möchtest du die Änderungen an „%@“ sichern?";
+"Your changes are lost if you don't save them." = "Deine Änderungen gehen verloren, wenn du sie nicht sicherst.";
+"Don't Save" = "Nicht sichern";
+"Open Safe Help about locking." = "Die Safe-Hilfe zum Sperren öffnen.";
+"Unlock %@" = "„%@“ entsperren";
+"Type the password of %@ to show the text again." = "Gib das Passwort von „%@“ ein, um den Text wieder anzuzeigen.";
+"Wrong password" = "Falsches Passwort";
+"The text stays hidden." = "Der Text bleibt verborgen.";
+"cannot create %@: %@" = "%1$@ kann nicht erstellt werden: %2$@";
+"cannot write %@: %@" = "%1$@ kann nicht geschrieben werden: %2$@";
+
+/* SafeApp/Finder/RouterFlows.swift */
+"Safe will not encrypt" = "Safe verschlüsselt nicht";
+"Encrypt “%@”" = "„%@“ verschlüsseln";
+"Encrypt %ld file" = "%ld Datei verschlüsseln";
+"Encrypt %ld files" = "%ld Dateien verschlüsseln";
+"this %ld file" = "diese %ld Datei";
+"these %ld files" = "diese %ld Dateien";
+"Type a password for %@ twice. Safe writes an encrypted copy ending in .crypt next to each file, checks it, and then deletes the original. Without the password the files cannot be opened again." = "Gib zweimal ein Passwort für %@ ein. Safe legt neben jeder Datei eine verschlüsselte Kopie mit der Endung .crypt an, prüft sie und löscht dann das Original. Ohne das Passwort lassen sich die Dateien nicht mehr öffnen.";
+"Encrypting “%@” ..." = "„%@“ wird verschlüsselt …";
+"It is an encrypted disk image. To use it as a volume, add it in Safe's Volumes window (Add Existing)" = "Es ist ein verschlüsseltes Disk-Image. Um es als Volume zu nutzen, füge es im Fenster „Safe-Volumes“ hinzu (Vorhandenes hinzufügen)";
+"It is not there any more" = "Sie ist nicht mehr da";
+"It is a folder. To encrypt a folder, make a volume from it in Safe's Volumes window (New from Folder)" = "Es ist ein Ordner. Um einen Ordner zu verschlüsseln, mache im Fenster „Safe-Volumes“ ein Volume daraus (Aus Ordner)";
+"It is encrypted already" = "Sie ist bereits verschlüsselt";
+"A file named %@ exists already" = "Eine Datei namens %@ gibt es bereits";
+"It has other names (hard links), so deleting it would leave it unencrypted on the disk under those names" = "Sie hat weitere Namen (harte Links). Wenn sie gelöscht würde, bliebe sie unter diesen Namen unverschlüsselt auf dem Datenträger";
+"“%@”: %@." = "„%@“: %@.";
+"“%@” was not encrypted" = "„%@“ wurde nicht verschlüsselt";
+"Some files were not encrypted" = "Einige Dateien wurden nicht verschlüsselt";
+"No file was encrypted" = "Keine Datei wurde verschlüsselt";
+"The originals of these files were not deleted." = "Die Originale dieser Dateien wurden nicht gelöscht.";
+"“%@” is in an older format" = "„%@“ ist in einem älteren Format";
+"It was written %@. Safe opened it and writes it in the current format the next time you save it (Cmd-S)." = "Sie wurde %@ geschrieben. Safe hat sie geöffnet und schreibt sie im aktuellen Format, wenn du sie das nächste Mal sicherst (Befehl-S).";
+"It was written %@. The viewer can save it again in the current format." = "Sie wurde %@ geschrieben. Der Viewer kann sie im aktuellen Format neu sichern.";
+"Safe could not confirm the password, so this is shown read only, as text in %@. If it is what you expect, the password is right." = "Safe konnte das Passwort nicht bestätigen. Deshalb wird dies schreibgeschützt angezeigt, als Text in %@. Wenn es so aussieht wie erwartet, ist das Passwort richtig.";
+"Safe cannot show “%@”. It can export it: the decrypted original is then written to a place you choose, and that copy is not encrypted." = "Safe kann „%@“ nicht anzeigen, aber exportieren: Das entschlüsselte Original wird dann an einen Ort deiner Wahl geschrieben, und diese Kopie ist nicht verschlüsselt.";
+"Save in Current Format" = "Im aktuellen Format sichern";
+"Save in Current Format..." = "Im aktuellen Format sichern …";
+"The file was written %@. Save in Current Format writes it again in the current format." = "Die Datei wurde %@ geschrieben. „Im aktuellen Format sichern“ schreibt sie neu im aktuellen Format.";
+"The file was written %@. Safe could not confirm the password, so check an exported copy before you save it in the current format." = "Die Datei wurde %@ geschrieben. Safe konnte das Passwort nicht bestätigen. Prüfe deshalb eine exportierte Kopie, bevor du sie im aktuellen Format sicherst.";
+"Save “%@” in the current format?" = "„%@“ im aktuellen Format sichern?";
+"Safe could not confirm the password of “%1$@”. If it is wrong, the content is meaningless bytes, and saving would replace the file with them, encrypted with that password. The file as it is now is kept as “%1$@.bak” either way, replacing an older “%1$@.bak”. Save only if an exported copy was right." = "Safe konnte das Passwort von „%1$@“ nicht bestätigen. Ist es falsch, besteht der Inhalt aus bedeutungslosen Bytes, und das Sichern würde die Datei durch sie ersetzen, verschlüsselt mit diesem Passwort. Die Datei, wie sie jetzt ist, bleibt in jedem Fall als „%1$@.bak“ erhalten und ersetzt eine ältere „%1$@.bak“. Sichere nur, wenn eine exportierte Kopie richtig war.";
+"Safe will not save" = "Safe sichert nicht";
+"Saving “%@” ..." = "„%@“ wird gesichert …";
+"“%@” is now in the current format" = "„%@“ ist jetzt im aktuellen Format";
+"The previous version is kept as “%@.bak”." = "Die vorherige Version bleibt als „%@.bak“ erhalten.";
+"“%@” was not saved" = "„%@“ wurde nicht gesichert";
+"“%@” next to it holds the previous version." = "„%@“ daneben enthält die vorherige Version.";
+"Safe locked while a message about “%1$@” was open. Type the password of “%1$@” again." = "Safe wurde gesperrt, während eine Meldung zu „%1$@“ offen war. Gib das Passwort von „%1$@“ erneut ein.";
+"“%@” cannot be opened" = "„%@“ kann nicht geöffnet werden";
+"It is not there any more." = "Sie ist nicht mehr da.";
+"It is a folder, not an encrypted file." = "Es ist ein Ordner, keine verschlüsselte Datei.";
+"Open “%@”" = "„%@“ öffnen";
+"Export “%@”" = "„%@“ exportieren";
+"Type the password of “%@”." = "Gib das Passwort von „%@“ ein.";
+"Type the password of “%@” again." = "Gib das Passwort von „%@“ erneut ein.";
+"The password was not right, again. If you are sure that it is, the file may be damaged: %@ Type the password of “%@” again." = "Das Passwort war wieder falsch. Wenn du sicher bist, dass es stimmt, ist die Datei vielleicht beschädigt: %1$@ Gib das Passwort von „%2$@“ erneut ein.";
+"The password was not right, again. If you are sure that it is, the file may be damaged. Type the password of “%@” again." = "Das Passwort war wieder falsch. Wenn du sicher bist, dass es stimmt, ist die Datei vielleicht beschädigt. Gib das Passwort von „%@“ erneut ein.";
+"The password was not right. If you are sure that it is, the file may be damaged: its length does not fit the current format, as when a copy or a sync was interrupted. Type the password of “%@” again." = "Das Passwort war falsch. Wenn du sicher bist, dass es stimmt, ist die Datei vielleicht beschädigt: Ihre Länge passt nicht zum aktuellen Format, wie wenn ein Kopieren oder Synchronisieren abgebrochen wurde. Gib das Passwort von „%@“ erneut ein.";
+"The password was not right. Type the password of “%@” again." = "Das Passwort war falsch. Gib das Passwort von „%@“ erneut ein.";
+"The password seems right, but the end of “%@” is missing, as when a copy, a download or a sync was interrupted, so Safe cannot open it as it is." = "Das Passwort scheint richtig zu sein, aber das Ende von „%@“ fehlt, wie wenn ein Kopieren, Laden oder Synchronisieren abgebrochen wurde. Deshalb kann Safe die Datei so nicht öffnen.";
+"The password seems right, but the end of “%@” is missing, as when a copy, a download or a sync was interrupted, so Safe cannot export it as it is." = "Das Passwort scheint richtig zu sein, aber das Ende von „%@“ fehlt, wie wenn ein Kopieren, Laden oder Synchronisieren abgebrochen wurde. Deshalb kann Safe die Datei so nicht exportieren.";
+"Export Readable Part writes what can be read, without the missing end, to a place you choose, not encrypted." = "„Lesbaren Teil exportieren“ schreibt, was sich lesen lässt, ohne das fehlende Ende, unverschlüsselt an einen Ort deiner Wahl.";
+"“%@” is damaged" = "„%@“ ist beschädigt";
+"Export Readable Part..." = "Lesbaren Teil exportieren …";
+"Type Another Password" = "Anderes Passwort eingeben";
+"“%@” was not exported" = "„%@“ wurde nicht exportiert";
+"Safe tried every format it knows. If you are sure that the password is right, “%@” may be damaged, or an old file encrypted with RC4 (crypt.sh before version 1.4 wrote such files). Safe cannot check its content, so it cannot open it." = "Safe hat jedes Format versucht, das es kennt. Wenn du sicher bist, dass das Passwort stimmt, ist „%@“ vielleicht beschädigt oder eine alte, mit RC4 verschlüsselte Datei (crypt.sh vor Version 1.4 schrieb solche Dateien). Safe kann ihren Inhalt nicht prüfen und sie deshalb nicht öffnen.";
+"Export Readable Part writes what this password gives for the start of the file in the current format, as for a file whose end is missing (an interrupted copy or sync)." = "„Lesbaren Teil exportieren“ schreibt, was dieses Passwort im aktuellen Format für den Anfang der Datei ergibt, wie bei einer Datei, deren Ende fehlt (ein abgebrochenes Kopieren oder Synchronisieren).";
+"Export as an Old RC4 File writes the file decrypted with RC4, which gives a result with any password. Either is written to a place you choose, not encrypted, for you to check: with a wrong password it is meaningless bytes." = "„Als alte RC4-Datei exportieren“ schreibt die Datei mit RC4 entschlüsselt. RC4 ergibt mit jedem Passwort ein Ergebnis. Beides wird unverschlüsselt an einen Ort deiner Wahl geschrieben, damit du es prüfen kannst: Mit einem falschen Passwort sind es bedeutungslose Bytes.";
+"Type It Again" = "Erneut eingeben";
+"Export as an Old RC4 File..." = "Als alte RC4-Datei exportieren …";
+"The password was not right" = "Das Passwort war falsch";
+"A damaged file in the current format, whose end is missing (an interrupted copy or sync): Safe writes the part that can be read." = "Eine beschädigte Datei im aktuellen Format, deren Ende fehlt (ein abgebrochenes Kopieren oder Synchronisieren): Safe schreibt den Teil, der sich lesen lässt.";
+"Damaged File (Readable Part)" = "Beschädigte Datei (lesbarer Teil)";
+"An old file from crypt.sh before version 1.4: RC4 with a key from MD5." = "Eine alte Datei von crypt.sh vor Version 1.4: RC4 mit einem Schlüssel aus MD5.";
+"crypt.sh Before 1.4 (MD5 Key)" = "crypt.sh vor 1.4 (MD5-Schlüssel)";
+"An old file from another tool: RC4 with a key from SHA-256." = "Eine alte Datei von einem anderen Programm: RC4 mit einem Schlüssel aus SHA-256.";
+"Another Tool (SHA-256 Key)" = "Anderes Programm (SHA-256-Schlüssel)";
+"How was “%@” written?" = "Wie wurde „%@“ geschrieben?";
+"Safe can export what the password gives for “%@” read in one of these ways, not encrypted, to a place you choose. It cannot check the result, which is meaningless bytes with a wrong password, so it never shows or saves it. If you do not know, choose the first; if the copy is not usable, export it again another way." = "Safe kann exportieren, was das Passwort für „%@“ ergibt, wenn die Datei auf eine dieser Arten gelesen wird, unverschlüsselt an einen Ort deiner Wahl. Safe kann das Ergebnis nicht prüfen. Mit einem falschen Passwort sind es bedeutungslose Bytes, deshalb zeigt oder sichert Safe es nie. Wenn du es nicht weißt, wähle die erste Art. Ist die Kopie nicht brauchbar, exportiere sie noch einmal auf eine andere Art.";
+"If the password is right but the result is not usable, Other Readings exports the file read as a damaged file whose end is missing, or an old RC4 file, for you to check." = "Wenn das Passwort stimmt, das Ergebnis aber nicht brauchbar ist, exportiert „Andere Lesarten“ die Datei, gelesen als beschädigte Datei ohne Ende oder als alte RC4-Datei, damit du sie prüfen kannst.";
+"If the password is right but the result is not usable, Other Readings exports the file read as a damaged file whose end is missing, for you to check." = "Wenn das Passwort stimmt, das Ergebnis aber nicht brauchbar ist, exportiert „Andere Lesarten“ die Datei, gelesen als beschädigte Datei ohne Ende, damit du sie prüfen kannst.";
+"If the password is right but the result is not usable, Other Readings exports the file read as an old RC4 file, for you to check." = "Wenn das Passwort stimmt, das Ergebnis aber nicht brauchbar ist, exportiert „Andere Lesarten“ die Datei, gelesen als alte RC4-Datei, damit du sie prüfen kannst.";
+"The content of “%@” does not look like text in any encoding, so Safe could not confirm the password. With a wrong password the content is meaningless bytes, as it most likely is here." = "Der Inhalt von „%@“ sieht in keiner Codierung wie Text aus, daher konnte Safe das Passwort nicht bestätigen. Mit einem falschen Passwort besteht der Inhalt aus bedeutungslosen Bytes, wie hier höchstwahrscheinlich.";
+"The content of “%@” does not start as %@ always does, so Safe could not confirm the password. With a wrong password the content is meaningless bytes, as it most likely is here." = "Der Inhalt von „%1$@“ beginnt nicht so, wie %2$@ immer beginnt, daher konnte Safe das Passwort nicht bestätigen. Mit einem falschen Passwort besteht der Inhalt aus bedeutungslosen Bytes, wie hier höchstwahrscheinlich.";
+"Other Readings..." = "Andere Lesarten …";
+"Export Anyway..." = "Trotzdem exportieren …";
+"The password is probably not right" = "Das Passwort ist wahrscheinlich falsch";
+"If you are sure that the password is right, Export Anyway writes the result to a place you choose, not encrypted." = "Wenn du sicher bist, dass das Passwort stimmt, schreibt „Trotzdem exportieren“ das Ergebnis unverschlüsselt an einen Ort deiner Wahl.";
+"The content of “%@” does not look like %@, so Safe could not confirm the password." = "Der Inhalt von „%1$@“ sieht nicht wie %2$@ aus, daher konnte Safe das Passwort nicht bestätigen.";
+"“%@” is so short that Safe cannot tell its text from what a wrong password gives, so it could not confirm the password." = "„%@“ ist so kurz, dass Safe den Text nicht von dem unterscheiden kann, was ein falsches Passwort ergibt. Daher konnte Safe das Passwort nicht bestätigen.";
+"Safe cannot check the content of a file like “%@”, so it could not confirm the password." = "Safe kann den Inhalt einer Datei wie „%@“ nicht prüfen, daher konnte es das Passwort nicht bestätigen.";
+"With a wrong password the content is meaningless bytes; with the right one the file is simply unusual." = "Mit einem falschen Passwort besteht der Inhalt aus bedeutungslosen Bytes, mit dem richtigen ist die Datei einfach ungewöhnlich.";
+"Open shows it in the viewer, without changing anything." = "„Öffnen“ zeigt sie im Viewer, ohne etwas zu ändern.";
+"Open" = "Öffnen";
+"Open Read-Only shows it as text without changing anything; you can allow editing once you have checked that it is right." = "„Schreibgeschützt öffnen“ zeigt sie als Text, ohne etwas zu ändern. Wenn du geprüft hast, dass sie richtig ist, kannst du die Bearbeitung zulassen.";
+"Open Read-Only" = "Schreibgeschützt öffnen";
+"Export writes the result to a place you choose, not encrypted." = "„Exportieren“ schreibt das Ergebnis unverschlüsselt an einen Ort deiner Wahl.";
+"Safe could not confirm the password" = "Safe konnte das Passwort nicht bestätigen";
+"Continue" = "Fortfahren";
+"Is this the right password?" = "Ist das das richtige Passwort?";
+"“%@” opened only as a file written %@, and Safe cannot tell whether the result is right. With a wrong password, or if the file is damaged, it would be meaningless bytes." = "„%1$@“ ließ sich nur als Datei öffnen, die %2$@ geschrieben wurde, und Safe kann nicht erkennen, ob das Ergebnis richtig ist. Mit einem falschen Passwort, oder wenn die Datei beschädigt ist, wären es bedeutungslose Bytes.";
+"This file is in an encrypted volume. Its deleted plain copy stays readable in the volume's image to anyone with the volume's password; for protection by both passwords, encrypt files before you move them into the volume." = "Diese Datei liegt in einem verschlüsselten Volume. Ihre gelöschte unverschlüsselte Kopie bleibt im Image des Volumes für alle lesbar, die das Passwort des Volumes kennen. Damit beide Passwörter schützen, verschlüssle Dateien, bevor du sie in das Volume bewegst.";
+"Some of these files are in an encrypted volume. Their deleted plain copies stay readable in the volume's image to anyone with the volume's password; for protection by both passwords, encrypt files before you move them into the volume." = "Einige dieser Dateien liegen in einem verschlüsselten Volume. Ihre gelöschten unverschlüsselten Kopien bleiben im Image des Volumes für alle lesbar, die das Passwort des Volumes kennen. Damit beide Passwörter schützen, verschlüssle Dateien, bevor du sie in das Volume bewegst.";
+"Safe could not confirm the password for this file, so it cannot tell whether the copy is right: with a wrong password it is meaningless bytes. Check the copy before you use it." = "Safe konnte das Passwort für diese Datei nicht bestätigen und kann daher nicht erkennen, ob die Kopie richtig ist: Mit einem falschen Passwort sind es bedeutungslose Bytes. Prüfe die Kopie, bevor du sie verwendest.";
+"The file is damaged: its end is missing, so this copy is incomplete." = "Die Datei ist beschädigt: Ihr Ende fehlt, deshalb ist diese Kopie unvollständig.";
+"This is the start of the file as the password gives it in the current format, without the missing end. Safe could not confirm the password: with a wrong one it is meaningless bytes. Check the copy before you use it." = "Dies ist der Anfang der Datei, wie ihn das Passwort im aktuellen Format ergibt, ohne das fehlende Ende. Safe konnte das Passwort nicht bestätigen: Mit einem falschen sind es bedeutungslose Bytes. Prüfe die Kopie, bevor du sie verwendest.";
+"This file is in a synced folder, so the sync service has a plain copy of it, and keeps it in its trash and version history after the original is deleted here: delete it there too. Files are best encrypted before they go into a synced folder." = "Diese Datei liegt in einem synchronisierten Ordner. Der Sync-Dienst hat also eine unverschlüsselte Kopie davon und behält sie in seinem Papierkorb und Versionsverlauf, nachdem das Original hier gelöscht wurde: Lösche sie dort auch. Verschlüssle Dateien am besten, bevor sie in einen synchronisierten Ordner kommen.";
+"Some of these files are in a synced folder, so the sync service has plain copies of them, and keeps them in its trash and version history after the originals are deleted here: delete them there too. Files are best encrypted before they go into a synced folder." = "Einige dieser Dateien liegen in einem synchronisierten Ordner. Der Sync-Dienst hat also unverschlüsselte Kopien davon und behält sie in seinem Papierkorb und Versionsverlauf, nachdem die Originale hier gelöscht wurden: Lösche sie dort auch. Verschlüssle Dateien am besten, bevor sie in einen synchronisierten Ordner kommen.";
+"Please note (Safe says this once): a deleted file cannot be wiped reliably on an SSD, so the plain original may stay on the disk until it is overwritten, and Quick Look previews and the Spotlight index may keep copies of it; FileVault protects all of these if it is on. Time Machine backups and local snapshots keep older copies too." = "Bitte beachte (Safe sagt das nur einmal): Auf einer SSD lässt sich eine gelöschte Datei nicht zuverlässig überschreiben. Das unverschlüsselte Original kann daher auf dem Datenträger bleiben, bis es überschrieben wird, und Vorschaubilder von Übersicht und der Spotlight-Index können Kopien davon behalten. FileVault schützt all das, wenn es eingeschaltet ist. Auch Time Machine-Backups und lokale Schnappschüsse behalten ältere Kopien.";
+"It is not a file encrypted by Safe or crypt.sh" = "Es ist keine Datei, die Safe oder crypt.sh verschlüsselt hat";
+"The password is not right" = "Das Passwort ist falsch";
+"The file is damaged" = "Die Datei ist beschädigt";
+"The password is not right, or the file is damaged" = "Das Passwort ist falsch, oder die Datei ist beschädigt";
+"The file is damaged: its end is missing" = "Die Datei ist beschädigt: Ihr Ende fehlt";
+"The file changed on the disk in the meantime" = "Die Datei wurde inzwischen auf dem Datenträger geändert";
+"The check of the encrypted copy failed, so the original was kept" = "Die Prüfung der verschlüsselten Kopie ist fehlgeschlagen, deshalb wurde das Original behalten";
+"%@ exists already" = "%@ gibt es bereits";
+"Safe's self-test failed: %@" = "Der Selbsttest von Safe ist fehlgeschlagen: %@";
+"text" = "Text";
+"a .%@ file" = "eine .%@-Datei";
+"in the current format" = "im aktuellen Format";
+"with AES-256 and an MD5 key, as old versions of openssl did" = "mit AES-256 und einem MD5-Schlüssel (wie von alten Versionen von openssl)";
+"with AES-256 and a SHA-256 key, without PBKDF2" = "mit AES-256 und einem SHA-256-Schlüssel ohne PBKDF2";
+"with RC4 and an MD5 key, as crypt.sh did before version 1.4" = "mit RC4 und einem MD5-Schlüssel (wie von crypt.sh vor Version 1.4)";
+"with RC4 and a SHA-256 key" = "mit RC4 und einem SHA-256-Schlüssel";
+
+/* SafeApp/Finder/ServicesProvider.swift */
+"Safe received no files." = "Safe hat keine Dateien erhalten.";
+
+/* SafeApp/Help/HelpBook.swift */
+"The idea behind Safe" = "Die Idee hinter Safe";
+"Passwords" = "Passwörter";
+"Encrypting a file" = "Eine Datei verschlüsseln";
+"Opening and editing a text file" = "Eine Textdatei öffnen und bearbeiten";
+"Viewing PDFs and pictures, and exporting" = "PDFs und Bilder ansehen und exportieren";
+"Locking" = "Sperren";
+"Old files and the long term" = "Alte Dateien und die Zukunft";
+"Settings and language" = "Einstellungen und Sprache";
+"Keyboard shortcuts" = "Tastaturkurzbefehle";
+"When something goes wrong" = "Wenn etwas nicht klappt";
+"Viewing and exporting" = "Ansehen und exportieren";
+"# Safe Help\n\nThe help text is missing from this copy of Safe (Contents/Resources/%@). Safe itself works as usual. Ask whoever installed Safe to build it again with app/scripts/build-app.sh. The same text is in the source code, in app/Resources/%@.\n\nIn short:\n\n- Encrypt a file: right-click it in the Finder and choose Encrypt with Safe.\n- Open an encrypted file: double-click it. Command-S saves it encrypted again.\n- Volumes: Window > Volumes (Command-0).\n- Safe locks after 10 minutes without input, and when the Mac sleeps or locks.\n- A lost password cannot be recovered." = "# Safe-Hilfe\n\nDer Hilfetext fehlt in dieser Kopie von Safe (Contents/Resources/%@). Safe selbst funktioniert wie gewohnt. Bitte die Person, die Safe installiert hat, es mit app/scripts/build-app.sh neu zu bauen. Derselbe Text steht im Quellcode, in app/Resources/%@.\n\nKurz gesagt:\n\n- Eine Datei verschlüsseln: Klicke sie im Finder mit der rechten Maustaste an und wähle „Mit Safe verschlüsseln“.\n- Eine verschlüsselte Datei öffnen: Doppelklicke sie. Befehl-S sichert sie wieder verschlüsselt.\n- Volumes: Fenster > Volumes (Befehl-0).\n- Safe sperrt nach 10 Minuten ohne Eingabe und wenn der Mac in den Ruhezustand geht oder sich sperrt.\n- Ein verlorenes Passwort lässt sich nicht wiederherstellen.";
+
+/* SafeApp/Help/HelpWindowController.swift */
+"Search Help" = "Hilfe durchsuchen";
+"Search the help text. Return finds the next place, Shift-Return the one before (⌘F)." = "Den Hilfetext durchsuchen. Der Zeilenschalter findet die nächste Stelle, Umschalt-Zeilenschalter die vorherige (⌘F).";
+"How often the search text occurs in the help." = "Wie oft der Suchtext in der Hilfe vorkommt.";
+"Safe, version %@" = "Safe, Version %@";
+"Contents" = "Inhalt";
+"The sections of the help." = "Die Abschnitte der Hilfe.";
+"The sections of the help. Click one to go to it." = "Die Abschnitte der Hilfe. Klicke auf einen, um dorthin zu gehen.";
+
+/* SafeApp/Prompts/Alerts.swift */
+"OK" = "OK";
+"Type the %@ here." = "Hier eingeben: %@";
+"Go on with these values (Return)." = "Mit diesen Werten fortfahren (Zeilenschalter).";
+"Close this dialog without doing anything (Escape)." = "Diesen Dialog schließen, ohne etwas zu tun (esc).";
+"Open Safe Help about volumes." = "Die Safe-Hilfe zu Volumes öffnen.";
+"Name:" = "Name:";
+"The name of the new volume, which the Finder shows while it is open." = "Der Name des neuen Volumes, den der Finder zeigt, solange es geöffnet ist.";
+"Maximum size:" = "Maximale Größe:";
+"The most the volume can grow to, for example 500 MB, 2 GB or 1 TB. It takes only as much room as its files need." = "Wie groß das Volume höchstens werden kann, zum Beispiel 500 MB, 2 GB oder 1 TB. Es belegt nur so viel Platz, wie seine Dateien brauchen.";
+
+/* SafeApp/Prompts/PasswordPrompt.swift */
+"This password has letters of a script other than Latin, or emoji. Password fields on the Mac, Safe's included, take only Latin keyboard layouts and no emoji, so to open the file later you would have to paste the password, and should clear the clipboard afterwards. To use it anyway, type or paste it twice again and click OK." = "Dieses Passwort enthält Buchstaben einer nicht lateinischen Schrift oder Emoji. Passwortfelder auf dem Mac, auch die von Safe, nehmen nur lateinische Tastaturlayouts und keine Emoji an. Um die Datei später zu öffnen, müsstest du das Passwort also einsetzen und danach die Zwischenablage leeren. Wenn du es trotzdem verwenden willst, gib es noch einmal zweimal ein oder setze es ein und klicke auf „OK“.";
+"The password must not be empty." = "Das Passwort darf nicht leer sein.";
+"The two passwords are not the same. Type them again." = "Die beiden Passwörter sind nicht gleich. Gib sie noch einmal ein.";
+"The password contains a line break, probably from pasting. openssl and crypt.sh cannot use such a password; type or paste it again without it." = "Das Passwort enthält einen Zeilenumbruch, wahrscheinlich vom Einsetzen. openssl und crypt.sh können ein solches Passwort nicht verwenden. Gib es ohne Zeilenumbruch noch einmal ein oder setze es so ein.";
+"The password contains a control character, such as a tab, probably from pasting. Type it again without it." = "Das Passwort enthält ein Steuerzeichen, etwa einen Tabulator, wahrscheinlich vom Einsetzen. Gib es ohne dieses Zeichen noch einmal ein.";
+"The password is longer than %ld bytes, more than openssl's password prompt can take. Choose a shorter one." = "Das Passwort ist länger als %ld Byte, mehr als die Passwortabfrage von openssl annimmt. Wähle ein kürzeres.";
+"Type the password. Safe does not show it, and forgets it after use." = "Gib das Passwort ein. Safe zeigt es nicht an und vergisst es nach der Verwendung.";
+"Password:" = "Passwort:";
+"Type the new password. It cannot be recovered if it is lost, so keep it somewhere safe." = "Gib das neue Passwort ein. Ein verlorenes Passwort lässt sich nicht wiederherstellen, bewahre es also gut auf.";
+"Type the same password again, so that a typing mistake cannot lock you out." = "Gib dasselbe Passwort noch einmal ein, damit dich ein Tippfehler nicht aussperren kann.";
+"Again:" = "Wiederholen:";
+"Use this password (Return)." = "Dieses Passwort verwenden (Zeilenschalter).";
+"Open Safe Help about passwords." = "Die Safe-Hilfe zu Passwörtern öffnen.";
+
+/* SafeApp/Settings/Settings.swift */
+"Safe could not start again" = "Safe konnte nicht neu starten";
+
+/* SafeApp/Settings/SettingsWindowController.swift */
+"Open Safe Help about settings and the language." = "Die Safe-Hilfe zu Einstellungen und Sprache öffnen.";
+"Settings" = "Einstellungen";
+"Language:" = "Sprache:";
+"The language of Safe's menus, windows and messages. System follows the order of the languages in System Settings: German if German comes before English, otherwise English." = "Die Sprache der Menüs, Fenster und Meldungen von Safe. „System“ folgt der Reihenfolge der Sprachen in den Systemeinstellungen: Deutsch, wenn Deutsch vor Englisch steht, sonst Englisch.";
+"The menus, the Volumes window, the help and this window change at once. A text or a viewer that is open keeps its language until you open the file again; nothing is closed and no change is lost. The services in the Finder follow the language of macOS." = "Die Menüs, das Fenster „Volumes“, die Hilfe und dieses Fenster wechseln sofort. Ein geöffneter Text oder Viewer behält seine Sprache, bis du die Datei wieder öffnest. Dabei wird nichts geschlossen, und keine Änderung geht verloren. Die Dienste im Finder folgen der Sprache von macOS.";
+"System" = "System";
+"Restart Safe" = "Safe neu starten";
+"Quit Safe and start it again, so that the Open and Save dialogs and the About window are in the new language too. Only while no text, viewer or volume is open." = "Safe beenden und neu starten, damit auch die Dialoge zum Öffnen und Sichern und das Fenster „Über Safe“ in der neuen Sprache erscheinen. Nur möglich, solange kein Text, Viewer oder Volume geöffnet ist.";
+"The Open and Save dialogs, the About window and the search field of the Help menu change when Safe starts again." = "Die Dialoge zum Öffnen und Sichern, das Fenster „Über Safe“ und das Suchfeld im Menü „Hilfe“ wechseln, wenn Safe neu startet.";
+"The Open and Save dialogs, the About window and the search field of the Help menu change the next time Safe starts. A text, a viewer or a volume is open, so Safe does not offer to restart now." = "Die Dialoge zum Öffnen und Sichern, das Fenster „Über Safe“ und das Suchfeld im Menü „Hilfe“ wechseln beim nächsten Start von Safe. Ein Text, ein Viewer oder ein Volume ist geöffnet, deshalb bietet Safe jetzt keinen Neustart an.";
+"Notes about the language appear here." = "Hinweise zur Sprache erscheinen hier.";
+
+/* SafeApp/Viewer/DocumentAlerts.swift */
+"Safe is still checking that it can read back what it writes. Try again in a moment." = "Safe prüft noch, ob es zurücklesen kann, was es schreibt. Versuche es gleich noch einmal.";
+"Safe's self-test failed, so it does not encrypt or save anything: %@" = "Der Selbsttest von Safe ist fehlgeschlagen, deshalb verschlüsselt und sichert Safe nichts: %@";
+"The file is not an encrypted file that Safe knows." = "Die Datei ist keine verschlüsselte Datei, die Safe kennt.";
+"The password does not open the file." = "Das Passwort öffnet die Datei nicht.";
+"The encrypted file is damaged." = "Die verschlüsselte Datei ist beschädigt.";
+"The password does not open the file, or the file is damaged." = "Das Passwort öffnet die Datei nicht, oder die Datei ist beschädigt.";
+"The file is damaged: its end is missing." = "Die Datei ist beschädigt: Ihr Ende fehlt.";
+"The file changed on disk since it was opened." = "Die Datei wurde auf dem Datenträger geändert, seit sie geöffnet wurde.";
+"The encrypted file could not be read back correctly, so nothing was replaced." = "Die verschlüsselte Datei konnte nicht richtig zurückgelesen werden, deshalb wurde nichts ersetzt.";
+"%@ exists already." = "„%@“ ist bereits vorhanden.";
+"current format" = "aktuelles Format";
+"AES-256-CBC, key from MD5" = "AES-256-CBC, Schlüssel aus MD5";
+"AES-256-CBC, key from SHA-256 without PBKDF2" = "AES-256-CBC, Schlüssel aus SHA-256 ohne PBKDF2";
+"RC4, key from MD5" = "RC4, Schlüssel aus MD5";
+"RC4, key from SHA-256" = "RC4, Schlüssel aus SHA-256";
+
+/* SafeApp/Viewer/ExportController.swift */
+"Not exported" = "Nicht exportiert";
+"That is the encrypted file itself, or another encrypted file. Choose another name." = "Das ist die verschlüsselte Datei selbst oder eine andere verschlüsselte Datei. Wähle einen anderen Namen.";
+"The exported copy is not encrypted." = "Die exportierte Kopie ist nicht verschlüsselt.";
+"%@ will be written to %@ as a normal file. Anyone who can read that folder can read it, and a sync service may upload it. Delete it when you no longer need it." = "„%1$@“ wird als normale Datei in %2$@ geschrieben. Wer diesen Ordner lesen kann, kann sie lesen, und ein Sync-Dienst lädt sie womöglich hoch. Lösche sie, wenn du sie nicht mehr brauchst.";
+"That folder is in an encrypted volume: there, a deleted file stays readable in the volume's image to anyone with the volume's password. Choose a place outside the volume if you can, the Desktop for example." = "Dieser Ordner liegt in einem verschlüsselten Volume. Dort bleibt eine gelöschte Datei im Image des Volumes für alle lesbar, die das Passwort des Volumes kennen. Wähle wenn möglich einen Ort außerhalb des Volumes, zum Beispiel den Schreibtisch.";
+"Safe locked while the dialog was open, so nothing was written. Open or export the file again." = "Safe wurde gesperrt, während der Dialog offen war, deshalb wurde nichts geschrieben. Öffne oder exportiere die Datei noch einmal.";
+"The file was not exported" = "Die Datei wurde nicht exportiert";
+
+/* SafeApp/Viewer/ViewerWindowController.swift */
+"Open Safe Help about the viewer and exporting." = "Die Safe-Hilfe zum Ansehen und Exportieren öffnen.";
+"Unlock PDF…" = "PDF entsperren …";
+"This PDF has a password of its own. Type it to show the pages." = "Dieses PDF hat ein eigenes Passwort. Gib es ein, um die Seiten anzuzeigen.";
+"Export…" = "Exportieren …";
+"Write an unencrypted copy of this file to a place you choose. Safe warns before it writes (⌥⌘E)." = "Eine unverschlüsselte Kopie dieser Datei an einen Ort deiner Wahl schreiben. Safe warnt vorher (⌥⌘E).";
+"Close the viewer. Safe forgets the content (Escape)." = "Das Fenster schließen. Safe vergisst den Inhalt (esc).";
+"macOS cannot show %@ from memory. You can export the original with Export…." = "macOS kann „%@“ nicht aus dem Arbeitsspeicher anzeigen. Du kannst das Original mit „Exportieren …“ exportieren.";
+"Decrypted in memory only." = "Nur im Arbeitsspeicher entschlüsselt.";
+"Saved in the current format %@." = "Um %@ im aktuellen Format gesichert.";
+"The previous version is kept as %@." = "Die vorherige Version bleibt als %@ erhalten.";
+"Safe could not confirm the password." = "Safe konnte das Passwort nicht bestätigen.";
+"If this is what you expect, the password is right." = "Wenn das so aussieht, wie du es erwartest, ist das Passwort richtig.";
+"Old format: %@." = "Altes Format: %@.";
+"Save in Current Format writes the same content again in the current format and keeps the previous version as %@." = "„Im aktuellen Format sichern“ schreibt denselben Inhalt noch einmal im aktuellen Format und behält die vorherige Version als %@.";
+"Encrypt the same content again in today's format, with the same password, and keep the old file as %@." = "Denselben Inhalt mit demselben Passwort noch einmal im heutigen Format verschlüsseln und die alte Datei als %@ behalten.";
+"Another program or another Mac changed the file after it was opened. Close this window and open the file again." = "Ein anderes Programm oder ein anderer Mac hat die Datei geändert, nachdem sie geöffnet wurde. Schließe dieses Fenster und öffne die Datei noch einmal.";
+"The PDF stays locked." = "Das PDF bleibt gesperrt.";
+
+/* SafeApp/Volumes/VolumeController.swift */
+"Choose the folder to turn into an encrypted volume." = "Wähle den Ordner, aus dem ein verschlüsseltes Volume werden soll.";
+"Choose" = "Auswählen";
+"Where should the encrypted volume be kept? A synced folder is a good place." = "Wo soll das verschlüsselte Volume liegen? Ein synchronisierter Ordner ist ein guter Ort.";
+"Create" = "Erstellen";
+"Choose an encrypted disk image (.dmg or .sparsebundle)." = "Wähle ein verschlüsseltes Disk-Image (.dmg oder .sparsebundle).";
+"Add" = "Hinzufügen";
+"A volume is still open" = "Ein Volume ist noch geöffnet";
+"cannot read %@" = "%@ kann nicht gelesen werden";
+"cannot read %@: %@" = "%1$@ kann nicht gelesen werden: %2$@";
+
+/* SafeApp/Volumes/VolumeFlows.swift */
+"Private" = "Privat";
+"1 GB" = "1 GB";
+"The volume grows as files are added, up to the maximum size." = "Das Volume wächst mit den Dateien, die du hinzufügst, bis zur maximalen Größe.";
+"New empty volume" = "Neues leeres Volume";
+"Give the maximum size as a number with MB, GB or TB, for example 1 GB. The smallest is %ld MB." = "Gib die maximale Größe als Zahl mit MB, GB oder TB an, zum Beispiel 1 GB. Das Minimum ist %ld MB.";
+"New volume “%@”" = "Neues Volume „%@“";
+"Type a password for the new volume twice. Without it the volume cannot be opened." = "Gib zweimal ein Passwort für das neue Volume ein. Ohne dieses Passwort lässt sich das Volume nicht mehr öffnen.";
+"Making the volume “%@” ..." = "Volume „%@“ wird erstellt …";
+"The volume was not made" = "Das Volume wurde nicht erstellt";
+"Safe cannot make a volume from “%@”" = "Safe kann aus „%@“ kein Volume erstellen";
+"Safe makes an encrypted volume with a copy of everything in the folder, checks the copy file by file against the folder, and only then deletes the folder. If the check finds a difference, the folder is kept." = "Safe erstellt ein verschlüsseltes Volume mit einer Kopie des gesamten Ordnerinhalts. Dann vergleicht Safe die Kopie Datei für Datei mit dem Ordner. Erst danach löscht Safe den Ordner. Findet der Vergleich einen Unterschied, bleibt der Ordner erhalten.";
+"The folder is in a synced folder, so the sync service has plain copies of its files, and keeps them in its trash and version history after the folder is deleted here: delete them there too. Folders are best made into volumes before they go into a synced folder." = "Der Ordner liegt in einem synchronisierten Ordner. Der Sync-Dienst hat deshalb unverschlüsselte Kopien seiner Dateien. Er behält sie in seinem Papierkorb und Versionsverlauf, auch wenn der Ordner hier gelöscht wird: Lösche sie dort ebenfalls. Am besten machst du Ordner zu Volumes, bevor sie in einen synchronisierten Ordner kommen.";
+"Make a volume from “%@”?" = "Volume aus „%@“ erstellen?";
+"Copying “%@” into a new encrypted volume ..." = "„%@“ wird in ein neues verschlüsseltes Volume kopiert …";
+"The folder was not changed." = "Der Ordner wurde nicht verändert.";
+"The folder was not deleted. The new volume is at %@; you can delete it, or add it to the list with Add Existing." = "Der Ordner wurde nicht gelöscht. Das neue Volume liegt unter %@. Du kannst es löschen oder mit „Vorhandenes hinzufügen“ in die Liste aufnehmen.";
+"The folder was kept" = "Der Ordner wurde behalten";
+"Safe could not read the folder: %@." = "Safe konnte den Ordner nicht lesen: %@.";
+"The new volume does not hold exactly the files of “%@”." = "Das neue Volume enthält nicht genau die Dateien von „%@“.";
+"Safe could not check the new volume: %@." = "Safe konnte das neue Volume nicht prüfen: %@.";
+"“%@” changed while Safe was checking the new volume: another app or a sync service wrote to it. The volume may not hold the newest files, so the folder was not deleted%@. The new volume is at %@; you can delete it, or add it to the list with Add Existing." = "„%1$@“ hat sich geändert, während Safe das neue Volume prüfte: Eine andere App oder ein Sync-Dienst hat hineingeschrieben. Das Volume enthält vielleicht nicht die neuesten Dateien, deshalb wurde der Ordner nicht gelöscht%2$@. Das neue Volume liegt unter %3$@. Du kannst es löschen oder mit „Vorhandenes hinzufügen“ in die Liste aufnehmen.";
+"The volume is ready, but the folder was not deleted completely" = "Das Volume ist fertig, aber der Ordner wurde nicht vollständig gelöscht";
+"“%@” holds exactly the files of the folder “%@”, which was deleted. Open the volume to use the files." = "„%1$@“ enthält genau die Dateien des Ordners „%2$@“. Der Ordner wurde gelöscht. Öffne das Volume, um die Dateien zu verwenden.";
+"Please note: deleted files cannot be wiped reliably on an SSD. The unencrypted copies may stay on the disk until they are overwritten. Previews that the Finder made (Quick Look thumbnails) and the Spotlight index can also keep copies outside the volume. FileVault protects all of these if it is switched on. If the folder was in a synced folder, the sync service has plain copies and keeps them in its trash and version history; Time Machine backups and local snapshots keep older copies too. Delete those as well, or make volumes from folders before they go into a synced folder." = "Bitte beachte: Auf einer SSD lassen sich gelöschte Dateien nicht zuverlässig überschreiben. Die unverschlüsselten Kopien können auf dem Datenträger bleiben, bis sie überschrieben werden. Auch Vorschaubilder des Finders (Übersicht) und der Spotlight-Index können Kopien außerhalb des Volumes enthalten. FileVault schützt all das, wenn es eingeschaltet ist. Lag der Ordner in einem synchronisierten Ordner, hat der Sync-Dienst unverschlüsselte Kopien und behält sie in seinem Papierkorb und Versionsverlauf. Auch Time Machine-Backups und lokale Schnappschüsse enthalten ältere Kopien. Lösche auch diese, oder mache Ordner zu Volumes, bevor sie in einen synchronisierten Ordner kommen.";
+"The volume is ready" = "Das Volume ist fertig";
+"Safe could not move the folder aside to delete it: %@. The volume holds all of its files, so you can delete the folder yourself." = "Safe konnte den Ordner zum Löschen nicht beiseiteschieben: %@. Das Volume enthält alle seine Dateien, du kannst den Ordner also selbst löschen.";
+", and it is now at %@, because Safe could not move it back" = ". Er liegt jetzt unter %@, weil Safe ihn nicht zurückschieben konnte";
+"Deleting the folder “%@” ..." = "Ordner „%@“ wird gelöscht …";
+"%@. The volume holds all of its files, so you can delete what is left of the folder yourself; it is at %@." = "%1$@. Das Volume enthält alle seine Dateien, du kannst den Rest des Ordners also selbst löschen. Er liegt unter %2$@.";
+"Safe did not finish deleting a folder" = "Safe hat einen Ordner nicht fertig gelöscht";
+"When Safe made an encrypted volume from a folder, it was stopped (by a crash, a forced quit or a power cut) while it deleted the folder's unencrypted copy. The volume holds all of the files. What is left of the copy is at %@, hidden from the Finder, and it is not encrypted.\n\nDelete removes it. To keep it, choose Show in Finder and rename it." = "Als Safe aus einem Ordner ein verschlüsseltes Volume erstellt hat, wurde es beim Löschen der unverschlüsselten Kopie des Ordners unterbrochen (durch einen Absturz, ein sofortiges Beenden oder einen Stromausfall). Das Volume enthält alle Dateien. Der Rest der Kopie liegt unter %@, ist im Finder ausgeblendet und nicht verschlüsselt.\n\n„Löschen“ entfernt ihn. Wenn du ihn behalten möchtest, wähle „Im Finder anzeigen“ und benenne ihn um.";
+"Show in Finder" = "Im Finder anzeigen";
+"Deleting “%@” ..." = "„%@“ wird gelöscht …";
+"The folder was not deleted completely" = "Der Ordner wurde nicht vollständig gelöscht";
+"%@. What is left of it is at %@; you can delete it yourself." = "%1$@. Der Rest liegt unter %2$@. Du kannst ihn selbst löschen.";
+"Checking the new volume against the folder ..." = "Das neue Volume wird mit dem Ordner verglichen …";
+"It is not a folder." = "Das ist kein Ordner.";
+"Safe does not make volumes from the home folder, a folder that contains it, or a top-level folder of the disk." = "Safe erstellt keine Volumes aus dem Benutzerordner, aus einem Ordner, der ihn enthält, oder aus einem Ordner auf der obersten Ebene des Datenträgers.";
+"It is a whole disk or volume, not a folder on one." = "Das ist ein ganzer Datenträger oder ein Volume, kein Ordner darauf.";
+" and %ld more" = " und %ld weitere";
+"Some of its files have other names (hard links) outside the folder: %@. Deleting the folder would leave them unencrypted on the disk under those names. Make the volume with New Empty and copy the files into it instead, or remove the other names first." = "Einige seiner Dateien haben weitere Namen (harte Links) außerhalb des Ordners: %@. Würde der Ordner gelöscht, blieben sie unter diesen Namen unverschlüsselt auf dem Datenträger. Erstelle stattdessen ein leeres Volume und kopiere die Dateien hinein, oder entferne zuerst die anderen Namen.";
+"A volume is open inside the folder, at %@. Close it first." = "Im Ordner ist ein Volume geöffnet, unter %@. Schließe es zuerst.";
+"Choose another place" = "Wähle einen anderen Ort";
+"The volume cannot be stored inside the folder it is made from, because the folder is deleted afterwards." = "Das Volume kann nicht in dem Ordner gesichert werden, aus dem es erstellt wird, weil dieser Ordner danach gelöscht wird.";
+"Choose another name" = "Wähle einen anderen Namen";
+"“%@” exists already there. Safe does not replace it." = "„%@“ ist dort bereits vorhanden. Safe ersetzt es nicht.";
+"The volume was made but not added to the list" = "Das Volume wurde erstellt, aber nicht in die Liste aufgenommen";
+"%@. It is at %@; add it with Add Existing." = "%1$@. Es liegt unter %2$@. Füge es mit „Vorhandenes hinzufügen“ hinzu.";
+"“%@” is in the list already" = "„%@“ ist bereits in der Liste";
+"It is listed as “%@”." = "Es steht dort als „%@“.";
+"“%@” is not encrypted" = "„%@“ ist nicht verschlüsselt";
+"Safe keeps only encrypted volumes in its list." = "Safe nimmt nur verschlüsselte Volumes in seine Liste auf.";
+"Safe cannot read “%@”" = "Safe kann „%@“ nicht lesen";
+"Remove “%@” from the list?" = "„%@“ aus der Liste entfernen?";
+"The volume itself stays where it is, at %@, and is not deleted. You can add it again with Add Existing." = "Das Volume selbst bleibt, wo es ist, unter %@, und wird nicht gelöscht. Du kannst es mit „Vorhandenes hinzufügen“ wieder aufnehmen.";
+"Remove" = "Entfernen";
+"“%@” was not removed" = "„%@“ wurde nicht entfernt";
+"The setting was not saved" = "Die Einstellung wurde nicht gesichert";
+"“%@” cannot be found" = "„%@“ wurde nicht gefunden";
+"There is nothing at %@." = "Unter %@ ist nichts vorhanden.";
+"%@ is not running" = "%@ läuft nicht";
+"%@ keeps the folder of “%@” in sync. As it is not running, this copy of the volume may not be the latest one. Open it anyway?" = "%1$@ hält den Ordner von „%2$@“ synchron. Da die App nicht läuft, ist diese Kopie des Volumes vielleicht nicht die neueste. Trotzdem öffnen?";
+"Open Anyway" = "Trotzdem öffnen";
+"Type the password of the volume “%@”." = "Gib das Passwort des Volumes „%@“ ein.";
+"Opening “%@” ..." = "„%@“ wird geöffnet …";
+"“%@” was not opened" = "„%@“ wurde nicht geöffnet";
+"Closing “%@” ..." = "„%@“ wird geschlossen …";
+"“%@” is still open" = "„%@“ ist noch geöffnet";
+"Files on it are in use. Close them, or quit the apps that use them, and try again. (%@)" = "Dateien darauf werden noch verwendet. Schließe sie oder beende die Apps, die sie verwenden, und versuche es erneut. (%@)";
+"Changing the password does not change the volume's key: a copy of the volume kept from before (in a sync service's version history, a backup or on another Mac) still opens with the old password." = "Das Ändern des Passworts ändert nicht den Schlüssel des Volumes: Eine ältere Kopie des Volumes (im Versionsverlauf eines Sync-Dienstes, in einem Backup oder auf einem anderen Mac) lässt sich weiterhin mit dem alten Passwort öffnen.";
+"Type the current password of “%@”." = "Gib das aktuelle Passwort von „%@“ ein.";
+"Change the password of “%@”" = "Passwort von „%@“ ändern";
+"New password for “%@”" = "Neues Passwort für „%@“";
+"Type the new password twice." = "Gib das neue Passwort zweimal ein.";
+"Changing the password of “%@” ..." = "Passwort von „%@“ wird geändert …";
+"The password of “%@” was changed" = "Das Passwort von „%@“ wurde geändert";
+"The volume now opens with the new password. Its key stays the same, so a copy of the volume kept from before (in a sync service's version history, a backup or another Mac) still opens with the old password. If the old password may be known to someone, make a new volume (New Empty) and move the files into it." = "Das Volume öffnet sich jetzt mit dem neuen Passwort. Sein Schlüssel bleibt gleich. Eine ältere Kopie des Volumes (im Versionsverlauf eines Sync-Dienstes, in einem Backup oder auf einem anderen Mac) lässt sich deshalb weiterhin mit dem alten Passwort öffnen. Wenn jemand das alte Passwort kennen könnte, erstelle ein neues Volume („Leeres Volume“) und verschiebe die Dateien dorthin.";
+"The current password was not right. Type the current password of “%@” again." = "Das aktuelle Passwort war falsch. Gib das aktuelle Passwort von „%@“ erneut ein.";
+"The password was not changed" = "Das Passwort wurde nicht geändert";
+"“%@” is open at another place" = "„%@“ ist an einem anderen Ort geöffnet";
+"It is open at %@, not at %@, where the file in the editor was. Close it in the Volumes window, then try again." = "Es ist unter %1$@ geöffnet, nicht unter %2$@, wo die Datei im Editor lag. Schließe es im Fenster „Volumes“ und versuche es dann erneut.";
+"Type the password of the volume “%@”. Safe opens it at the same place as before, so that %@ can be saved there." = "Gib das Passwort des Volumes „%1$@“ ein. Safe öffnet es am selben Ort wie zuvor, damit %2$@ dort gesichert werden kann.";
+"Open “%@” again" = "„%@“ wieder öffnen";
+"When Safe locked, it could not close %@, because files on it were in use in another app. It is still open. Save and close the files, then close the volume in the Volumes window." = "Beim Sperren konnte Safe %@ nicht schließen, weil eine andere App Dateien darauf verwendet hat. Das Volume ist noch geöffnet. Sichere und schließe die Dateien, dann schließe das Volume im Fenster „Volumes“.";
+"Give the volume a name." = "Gib dem Volume einen Namen.";
+"The name must not contain / or : and must not start with a dot." = "Der Name darf weder / noch : enthalten und nicht mit einem Punkt beginnen.";
+"The name is too long." = "Der Name ist zu lang.";
+
+/* SafeApp/Volumes/VolumesWindowController.swift */
+"Check that this app is running before opening:" = "Vor dem Öffnen prüfen, ob diese App läuft:";
+"Safe Volumes" = "Safe-Volumes";
+"New Empty..." = "Leeres Volume …";
+"New from Folder..." = "Aus Ordner …";
+"Add Existing..." = "Vorhandenes hinzufügen …";
+"Remove from List" = "Aus Liste entfernen";
+"Change Password..." = "Passwort ändern …";
+"Encrypted volumes are disk images in Apple's standard format. Open one to use its files in the Finder. Safe closes the volumes it opened after 10 minutes without use and when the Mac sleeps. To encrypt a single file, right-click it in the Finder and choose Encrypt with Safe (under Quick Actions or Services); double-click a .crypt file to open it." = "Verschlüsselte Volumes sind Disk-Images in Apples Standardformat. Öffne eines, um seine Dateien im Finder zu verwenden. Safe schließt die Volumes, die es geöffnet hat, nach 10 Minuten ohne Benutzung und wenn der Mac in den Ruhezustand geht. Um eine einzelne Datei zu verschlüsseln, klicke sie im Finder mit der rechten Maustaste an und wähle „Mit Safe verschlüsseln“ (unter „Schnellaktionen“ oder „Dienste“). Doppelklicke eine .crypt-Datei, um sie zu öffnen.";
+"Name" = "Name";
+"The name Safe shows for the volume." = "Der Name, den Safe für das Volume zeigt.";
+"Location" = "Ort";
+"Where the volume's disk image is stored." = "Wo das Disk-Image des Volumes liegt.";
+"State" = "Status";
+"Open, Closed, or Not found if nothing is at the location any more." = "Geöffnet, Geschlossen oder Nicht gefunden, wenn am Ort nichts mehr liegt.";
+"Your encrypted volumes. Double-click a volume, or select it and press Return, to open it." = "Deine verschlüsselten Volumes. Doppelklicke ein Volume oder wähle es aus und drücke den Zeilenschalter, um es zu öffnen.";
+"Before opening this volume, check that the app keeping its folder in sync is running, and warn if it is not." = "Vor dem Öffnen dieses Volumes prüfen, ob die App läuft, die seinen Ordner synchron hält, und warnen, wenn nicht.";
+"for example Nextcloud" = "zum Beispiel Nextcloud";
+"The name of the sync app, for example Nextcloud. Safe warns before opening the volume if no app of this name is running." = "Der Name der Sync-App, zum Beispiel Nextcloud. Safe warnt vor dem Öffnen des Volumes, wenn keine App dieses Namens läuft.";
+"[state] Open" = "Geöffnet";
+"Open at %@" = "Geöffnet unter %@";
+"[state] Closed" = "Geschlossen";
+"[state] Not found" = "Nicht gefunden";
+"There is nothing at this location." = "An diesem Ort liegt nichts.";
+"Safe is checking its encryption (self-test) ..." = "Safe prüft seine Verschlüsselung (Selbsttest) …";
+"The self-test failed, so Safe will not encrypt or save files: %@" = "Der Selbsttest ist fehlgeschlagen, deshalb verschlüsselt und sichert Safe keine Dateien: %@";
+"Messages about Safe's self-test, which checks its encryption at every start, appear here." = "Hier erscheinen Meldungen zum Selbsttest, mit dem Safe bei jedem Start seine Verschlüsselung prüft.";
+"New Empty Volume..." = "Neues leeres Volume …";
+"New Volume from Folder..." = "Neues Volume aus Ordner …";
+"Add Existing Volume..." = "Vorhandenes Volume hinzufügen …";
+"Open Volume" = "Volume öffnen";
+"Close Volume" = "Volume schließen";
+"Make a new, empty encrypted volume. You choose its name, maximum size, place and password (⌘N)." = "Ein neues, leeres verschlüsseltes Volume erstellen. Du wählst Name, maximale Größe, Ort und Passwort (⌘N).";
+"Make an encrypted volume from a folder. Safe checks the copy, then deletes the folder (⇧⌘N)." = "Ein verschlüsseltes Volume aus einem Ordner erstellen. Safe prüft die Kopie und löscht dann den Ordner (⇧⌘N).";
+"Add an encrypted disk image that is on the disk already, such as one made with Disk Utility (⇧⌘A)." = "Ein verschlüsseltes Disk-Image hinzufügen, das schon auf dem Datenträger liegt, etwa eines aus dem Festplattendienstprogramm (⇧⌘A).";
+"Open the selected volume with its password and show it in the Finder (⌘↩)." = "Das ausgewählte Volume mit seinem Passwort öffnen und im Finder zeigen (⌘↩).";
+"Close the selected volume. If a file on it is still in use, it stays open and Safe says so (⌘E)." = "Das ausgewählte Volume schließen. Wird eine Datei darauf noch benutzt, bleibt es geöffnet, und Safe sagt es dir (⌘E).";
+"Change the password of the selected volume while it is closed. A copy of the volume kept from before still opens with the old password." = "Das Passwort des ausgewählten Volumes ändern, solange es geschlossen ist. Eine ältere Kopie des Volumes lässt sich weiterhin mit dem alten Passwort öffnen.";
+"Remove the selected volume from this list. The volume itself stays on the disk and is not deleted (or press Delete in the list)." = "Das ausgewählte Volume aus dieser Liste entfernen. Das Volume selbst bleibt auf dem Datenträger und wird nicht gelöscht (oder drücke in der Liste die Rückschritttaste).";
+
+/* SafeApp/main.swift */
+"Safe cannot start" = "Safe kann nicht starten";
+"It could not switch off its own network access: %@" = "Es konnte seinen eigenen Netzwerkzugang nicht abschalten: %@";
+
+/* SafeCore/AppLogic/EditorLogic.swift */
+"Locked. The unsaved changes are kept; type the file's password to show them again." = "Gesperrt. Die nicht gesicherten Änderungen bleiben erhalten. Gib das Passwort der Datei ein, um sie wieder anzuzeigen.";
+"Text in %@." = "Text in %@.";
+"Saved %@, the previous version is kept as %@." = "Gesichert um %@, die vorherige Version bleibt als %@ erhalten.";
+"Saved %@." = "Gesichert um %@.";
+"Opened from an old format (%@); saving writes the current format." = "Aus einem alten Format geöffnet (%@). Beim Sichern wird das aktuelle Format geschrieben.";
+
+/* SafeCore/AppLogic/TextCoding.swift */
+"UTF-8 with a byte order mark" = "UTF-8 mit Byte-Order-Mark";
+
+/* SafeCore/Files/CryptFile.swift */
+"%ld byte" = "%ld Byte";
+"%ld bytes" = "%ld Byte";
+"It is larger than %@, too large to encrypt as one file. Put it in an encrypted volume instead: make one in Safe's Volumes window and move the file there" = "Sie ist größer als %@ und damit zu groß, um als eine Datei verschlüsselt zu werden. Lege sie stattdessen in ein verschlüsseltes Volume: Erstelle eines im Volumes-Fenster von Safe und bewege die Datei dorthin";
+"%@ is larger than %@, too large to encrypt as one file. Put it in an encrypted volume instead: make one in Safe's Volumes window and move the file there" = "%1$@ ist größer als %2$@ und damit zu groß, um als eine Datei verschlüsselt zu werden. Lege sie stattdessen in ein verschlüsseltes Volume: Erstelle eines im Volumes-Fenster von Safe und bewege die Datei dorthin";
+"%@ has other names (hard links), which would keep it unencrypted on the disk after the original is deleted, so it was not encrypted" = "%@ hat weitere Namen (harte Links). Unter diesen bliebe sie unverschlüsselt auf dem Datenträger, wenn das Original gelöscht ist. Deshalb wurde sie nicht verschlüsselt";
+"%@ is not a regular file, so it cannot be encrypted" = "%@ ist keine normale Datei und kann deshalb nicht verschlüsselt werden";
+"%@ has a resource fork, which an encrypted file cannot keep, so it was not encrypted. Put it in an encrypted volume instead" = "%@ hat einen Resource-Fork, den eine verschlüsselte Datei nicht behalten kann. Deshalb wurde sie nicht verschlüsselt. Lege sie stattdessen in ein verschlüsseltes Volume";
+"%@ changed while it was being encrypted, so it was kept; %@.crypt holds the earlier version" = "%1$@ hat sich beim Verschlüsseln geändert und wurde deshalb behalten. %2$@.crypt enthält die frühere Version";
+"%@.crypt was written, but cannot delete %@: %@" = "%1$@.crypt wurde geschrieben, aber %2$@ kann nicht gelöscht werden: %3$@";
+"cannot save %@, nothing changed: %@" = "%1$@ kann nicht gesichert werden, nichts wurde geändert: %2$@";
+
+/* SafeCore/Files/FileIO.swift */
+"cannot remove %@: %@" = "%1$@ kann nicht entfernt werden: %2$@";
+"cannot flush %@: %@" = "%1$@ kann nicht auf den Datenträger geschrieben werden: %2$@";
+"cannot rename %@ to %@: %@" = "%1$@ kann nicht in %2$@ umbenannt werden: %3$@";
+
+/* SafeCore/Volumes/DiskImage.swift */
+"The maximum size must be at least 1 MB." = "Die maximale Größe muss mindestens 1 MB sein.";
+"%@ is not a folder." = "%@ ist kein Ordner.";
+"The volume cannot be saved inside the folder it is made from." = "Das Volume kann nicht in dem Ordner gesichert werden, aus dem es erstellt wird.";
+"%@ is in use; the volume needs a new or empty folder." = "%@ wird verwendet. Das Volume braucht einen neuen oder leeren Ordner.";
+"%@ is already open at %@." = "%1$@ ist bereits unter %2$@ geöffnet.";
+"%@ is already open." = "%@ ist bereits geöffnet.";
+"%@ holds no volume that macOS can mount." = "%@ enthält kein Volume, das macOS aktivieren kann.";
+"%@ is open. Close it before changing its password." = "%@ ist geöffnet. Schließe es, bevor du das Passwort änderst.";
+"hdiutil isencrypted gave no answer for %@." = "hdiutil isencrypted hat für %@ keine Antwort gegeben.";
+"The name of the volume's file must end in .sparsebundle." = "Der Name der Datei des Volumes muss auf .sparsebundle enden.";
+"The folder %@ does not exist." = "Der Ordner %@ existiert nicht.";
+"The volume needs a name." = "Das Volume braucht einen Namen.";
+"The password must not contain a NUL character." = "Das Passwort darf kein NUL-Zeichen enthalten.";
+"There is no disk image at %@." = "Unter %@ gibt es kein Disk-Image.";
+"hdiutil reported no error, but %@ was not made." = "hdiutil hat keinen Fehler gemeldet, aber %@ wurde nicht erstellt.";
+
+/* SafeCore/Volumes/FolderVerifier.swift */
+"%@ is missing in %@." = "%1$@ fehlt in %2$@.";
+"%@ is in %@ but not in %@." = "%1$@ ist in %2$@, aber nicht in %3$@.";
+"%@ has %ld bytes in %@ and %ld bytes in %@." = "%1$@ hat %2$ld Byte in %3$@ und %4$ld Byte in %5$@.";
+"The link %@ points to %@ in %@ and to %@ in %@." = "Der Link %1$@ zeigt in %3$@ auf %2$@ und in %5$@ auf %4$@.";
+"%@ is not the same kind of item in %@ and %@." = "%1$@ ist in %2$@ und %3$@ nicht dieselbe Art von Objekt.";
+"%@ has different contents in %@ and %@." = "%1$@ hat in %2$@ und %3$@ einen anderen Inhalt.";
+"Cannot read the folder %@: %@" = "Der Ordner %1$@ kann nicht gelesen werden: %2$@";
+"Cannot read %@: %@" = "%1$@ kann nicht gelesen werden: %2$@";
+
+/* SafeCore/Volumes/Hdiutil.swift */
+"hdiutil failed with status %ld" = "hdiutil ist mit Status %ld fehlgeschlagen";
+"hdiutil printed no readable property list" = "hdiutil hat keine lesbare Eigenschaftsliste ausgegeben";
+"cannot run hdiutil: %@" = "hdiutil kann nicht ausgeführt werden: %@";
+
+/* SafeCore/Volumes/VolumeStore.swift */
+"%@ is not in the list of volumes." = "%@ ist nicht in der Liste der Volumes.";
+"Cannot make the folder %@: %@" = "Der Ordner %1$@ kann nicht erstellt werden: %2$@";
+"Cannot keep the unreadable %@: %@" = "Die unlesbare Datei %1$@ kann nicht aufbewahrt werden: %2$@";
+"Cannot encode the list of volumes: %@" = "Die Liste der Volumes kann nicht codiert werden: %@";
+"Cannot write %@: %@" = "%1$@ kann nicht geschrieben werden: %2$@";

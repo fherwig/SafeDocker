@@ -1,0 +1,557 @@
+/* Safe.app, English. Every key that the code looks up with L, Lp or LKey, once; the key is the
+   English text (a key starting with "[context] " shows the text after it). The app tests check
+   that this list matches the code and de.lproj. */
+
+/* SafeApp/AppDelegate.swift */
+"“%@”" = "“%@”";
+"Quit and leave %@ open?" = "Quit and leave %@ open?";
+"Files on it are in use, so Safe cannot close it. If you quit now, it stays open until you eject it in the Finder." = "Files on it are in use, so Safe cannot close it. If you quit now, it stays open until you eject it in the Finder.";
+"Cancel" = "Cancel";
+"Quit Anyway" = "Quit Anyway";
+"Choose encrypted files to open." = "Choose encrypted files to open.";
+"Choose files to encrypt. Each original is deleted after its encrypted copy is checked." = "Choose files to encrypt. Each original is deleted after its encrypted copy is checked.";
+"Encrypt" = "Encrypt";
+"Choose encrypted files to export as unencrypted copies." = "Choose encrypted files to export as unencrypted copies.";
+"Export" = "Export";
+"the self-test is still running" = "the self-test is still running";
+"Safe will not encrypt or save, because its self-test has not run." = "Safe will not encrypt or save, because its self-test has not run.";
+"Safe will not encrypt or save, because its self-test failed when it started, and it must never write a file it cannot read back. Files that are encrypted already can still be opened and exported. Ask whoever installed Safe to check it with Safe --self-test.\n\nWhat failed: %@" = "Safe will not encrypt or save, because its self-test failed when it started, and it must never write a file it cannot read back. Files that are encrypted already can still be opened and exported. Ask whoever installed Safe to check it with Safe --self-test.\n\nWhat failed: %@";
+"a check failed without a message" = "a check failed without a message";
+"Safe" = "Safe";
+"About Safe" = "About Safe";
+"Settings..." = "Settings...";
+"Lock Now" = "Lock Now";
+"Hide Safe" = "Hide Safe";
+"Hide Others" = "Hide Others";
+"Show All" = "Show All";
+"Quit Safe" = "Quit Safe";
+"File" = "File";
+"Open..." = "Open...";
+"Encrypt File..." = "Encrypt File...";
+"Close" = "Close";
+"Save" = "Save";
+"Export..." = "Export...";
+"Edit" = "Edit";
+"Undo" = "Undo";
+"Redo" = "Redo";
+"Cut" = "Cut";
+"Copy" = "Copy";
+"Paste" = "Paste";
+"Delete" = "Delete";
+"Select All" = "Select All";
+"Find" = "Find";
+"Find..." = "Find...";
+"Find Next" = "Find Next";
+"Find Previous" = "Find Previous";
+"View" = "View";
+"Zoom In" = "Zoom In";
+"Zoom Out" = "Zoom Out";
+"Actual Size" = "Actual Size";
+"Zoom to Fit" = "Zoom to Fit";
+"Next Page" = "Next Page";
+"Previous Page" = "Previous Page";
+"Volume" = "Volume";
+"Window" = "Window";
+"Minimize" = "Minimize";
+"Zoom" = "Zoom";
+"Volumes" = "Volumes";
+"Bring All to Front" = "Bring All to Front";
+"Help" = "Help";
+"Safe Help" = "Safe Help";
+
+/* SafeApp/Editor/ClipboardGuard.swift */
+"macOS may keep what you copy" = "macOS may keep what you copy";
+"macOS keeps a clipboard history (Spotlight). Safe marks what it copies as concealed and empties the clipboard after a minute, but it cannot empty that history, which may keep the copied text for hours, outside Safe's encryption. You can switch the history off in System Settings > Spotlight. Safe asks this once each time it starts." = "macOS keeps a clipboard history (Spotlight). Safe marks what it copies as concealed and empties the clipboard after a minute, but it cannot empty that history, which may keep the copied text for hours, outside Safe's encryption. You can switch the history off in System Settings > Spotlight. Safe asks this once each time it starts.";
+
+/* SafeApp/Editor/EditorViews.swift */
+"Search" = "Search";
+"Search this text. Return finds the next match, Shift-Return the one before. What you search for stays in this window (⌘F)." = "Search this text. Return finds the next match, Shift-Return the one before. What you search for stays in this window (⌘F).";
+"Previous" = "Previous";
+"Find the previous match (⇧⌘G)." = "Find the previous match (⇧⌘G).";
+"Next" = "Next";
+"Find the next match (⌘G)." = "Find the next match (⌘G).";
+"Done" = "Done";
+"Hide the search field (Escape)." = "Hide the search field (Escape).";
+"How often the search text occurs in the text." = "How often the search text occurs in the text.";
+"Show Text…" = "Show Text…";
+"Locked" = "Locked";
+"%@ has unsaved changes. They are kept, hidden, until you type the file's password." = "%@ has unsaved changes. They are kept, hidden, until you type the file's password.";
+"Type the file's password to show the text and your unsaved changes again (Return)." = "Type the file's password to show the text and your unsaved changes again (Return).";
+"Allow Editing" = "Allow Editing";
+"Warning" = "Warning";
+"Why the text is shown read only." = "Why the text is shown read only.";
+"Allow changes to the text. Do this only if the text is what you expect: then the password is right." = "Allow changes to the text. Do this only if the text is what you expect: then the password is right.";
+
+/* SafeApp/Editor/EditorWindowController.swift */
+"Open Safe Help about the editor." = "Open Safe Help about the editor.";
+"Safe could not confirm the password, so this is shown read only. If it is what you expect, the password is right." = "Safe could not confirm the password, so this is shown read only. If it is what you expect, the password is right.";
+"Not found" = "Not found";
+"%ld match" = "%ld match";
+"%ld matches" = "%ld matches";
+"%@ was not saved" = "%@ was not saved";
+"The folder that holds it, %@, is not there any more. If it is on a volume, the volume was closed: open the volume again, then save. Your changes are still in the window." = "The folder that holds it, %@, is not there any more. If it is on a volume, the volume was closed: open the volume again, then save. Your changes are still in the window.";
+"%@ cannot be saved in %@" = "%@ cannot be saved in %@";
+"Some characters in the text do not exist in %@, the encoding of this file. Safe can save it in UTF-8 instead; programs that expect %@ may then show some characters wrongly." = "Some characters in the text do not exist in %@, the encoding of this file. Safe can save it in UTF-8 instead; programs that expect %@ may then show some characters wrongly.";
+"Save as UTF-8" = "Save as UTF-8";
+"The volume “%@” was closed" = "The volume “%@” was closed";
+"Safe closed the volume “%@”, which holds %@, when it locked. Open it again at the same place to save your changes; they are still in the window." = "Safe closed the volume “%@”, which holds %@, when it locked. Open it again at the same place to save your changes; they are still in the window.";
+"Open “%@” Again" = "Open “%@” Again";
+"Not Now" = "Not Now";
+"%@ changed on disk" = "%@ changed on disk";
+"Another program or another Mac changed the file after you opened it. You can keep your version as a separate encrypted copy next to it, or discard your changes and load the file as it is now." = "Another program or another Mac changed the file after you opened it. You can keep your version as a separate encrypted copy next to it, or discard your changes and load the file as it is now.";
+"Keep My Version as a Copy" = "Keep My Version as a Copy";
+"Discard My Changes" = "Discard My Changes";
+"Your version was not saved" = "Your version was not saved";
+"Safe could not confirm the password for the file as it is now." = "Safe could not confirm the password for the file as it is now.";
+"The file on disk could not be loaded" = "The file on disk could not be loaded";
+"Your version is still in the window." = "Your version is still in the window.";
+"Do you want to save the changes to %@?" = "Do you want to save the changes to %@?";
+"Your changes are lost if you don't save them." = "Your changes are lost if you don't save them.";
+"Don't Save" = "Don't Save";
+"Open Safe Help about locking." = "Open Safe Help about locking.";
+"Unlock %@" = "Unlock %@";
+"Type the password of %@ to show the text again." = "Type the password of %@ to show the text again.";
+"Wrong password" = "Wrong password";
+"The text stays hidden." = "The text stays hidden.";
+"cannot create %@: %@" = "cannot create %@: %@";
+"cannot write %@: %@" = "cannot write %@: %@";
+
+/* SafeApp/Finder/RouterFlows.swift */
+"Safe will not encrypt" = "Safe will not encrypt";
+"Encrypt “%@”" = "Encrypt “%@”";
+"Encrypt %ld file" = "Encrypt %ld file";
+"Encrypt %ld files" = "Encrypt %ld files";
+"this %ld file" = "this %ld file";
+"these %ld files" = "these %ld files";
+"Type a password for %@ twice. Safe writes an encrypted copy ending in .crypt next to each file, checks it, and then deletes the original. Without the password the files cannot be opened again." = "Type a password for %@ twice. Safe writes an encrypted copy ending in .crypt next to each file, checks it, and then deletes the original. Without the password the files cannot be opened again.";
+"Encrypting “%@” ..." = "Encrypting “%@” ...";
+"It is an encrypted disk image. To use it as a volume, add it in Safe's Volumes window (Add Existing)" = "It is an encrypted disk image. To use it as a volume, add it in Safe's Volumes window (Add Existing)";
+"It is not there any more" = "It is not there any more";
+"It is a folder. To encrypt a folder, make a volume from it in Safe's Volumes window (New from Folder)" = "It is a folder. To encrypt a folder, make a volume from it in Safe's Volumes window (New from Folder)";
+"It is encrypted already" = "It is encrypted already";
+"A file named %@ exists already" = "A file named %@ exists already";
+"It has other names (hard links), so deleting it would leave it unencrypted on the disk under those names" = "It has other names (hard links), so deleting it would leave it unencrypted on the disk under those names";
+"“%@”: %@." = "“%@”: %@.";
+"“%@” was not encrypted" = "“%@” was not encrypted";
+"Some files were not encrypted" = "Some files were not encrypted";
+"No file was encrypted" = "No file was encrypted";
+"The originals of these files were not deleted." = "The originals of these files were not deleted.";
+"“%@” is in an older format" = "“%@” is in an older format";
+"It was written %@. Safe opened it and writes it in the current format the next time you save it (Cmd-S)." = "It was written %@. Safe opened it and writes it in the current format the next time you save it (Cmd-S).";
+"It was written %@. The viewer can save it again in the current format." = "It was written %@. The viewer can save it again in the current format.";
+"Safe could not confirm the password, so this is shown read only, as text in %@. If it is what you expect, the password is right." = "Safe could not confirm the password, so this is shown read only, as text in %@. If it is what you expect, the password is right.";
+"Safe cannot show “%@”. It can export it: the decrypted original is then written to a place you choose, and that copy is not encrypted." = "Safe cannot show “%@”. It can export it: the decrypted original is then written to a place you choose, and that copy is not encrypted.";
+"Save in Current Format" = "Save in Current Format";
+"Save in Current Format..." = "Save in Current Format...";
+"The file was written %@. Save in Current Format writes it again in the current format." = "The file was written %@. Save in Current Format writes it again in the current format.";
+"The file was written %@. Safe could not confirm the password, so check an exported copy before you save it in the current format." = "The file was written %@. Safe could not confirm the password, so check an exported copy before you save it in the current format.";
+"Save “%@” in the current format?" = "Save “%@” in the current format?";
+"Safe could not confirm the password of “%1$@”. If it is wrong, the content is meaningless bytes, and saving would replace the file with them, encrypted with that password. The file as it is now is kept as “%1$@.bak” either way, replacing an older “%1$@.bak”. Save only if an exported copy was right." = "Safe could not confirm the password of “%1$@”. If it is wrong, the content is meaningless bytes, and saving would replace the file with them, encrypted with that password. The file as it is now is kept as “%1$@.bak” either way, replacing an older “%1$@.bak”. Save only if an exported copy was right.";
+"Safe will not save" = "Safe will not save";
+"Saving “%@” ..." = "Saving “%@” ...";
+"“%@” is now in the current format" = "“%@” is now in the current format";
+"The previous version is kept as “%@.bak”." = "The previous version is kept as “%@.bak”.";
+"“%@” was not saved" = "“%@” was not saved";
+"“%@” next to it holds the previous version." = "“%@” next to it holds the previous version.";
+"Safe locked while a message about “%1$@” was open. Type the password of “%1$@” again." = "Safe locked while a message about “%1$@” was open. Type the password of “%1$@” again.";
+"“%@” cannot be opened" = "“%@” cannot be opened";
+"It is not there any more." = "It is not there any more.";
+"It is a folder, not an encrypted file." = "It is a folder, not an encrypted file.";
+"Open “%@”" = "Open “%@”";
+"Export “%@”" = "Export “%@”";
+"Type the password of “%@”." = "Type the password of “%@”.";
+"Type the password of “%@” again." = "Type the password of “%@” again.";
+"The password was not right, again. If you are sure that it is, the file may be damaged: %@ Type the password of “%@” again." = "The password was not right, again. If you are sure that it is, the file may be damaged: %@ Type the password of “%@” again.";
+"The password was not right, again. If you are sure that it is, the file may be damaged. Type the password of “%@” again." = "The password was not right, again. If you are sure that it is, the file may be damaged. Type the password of “%@” again.";
+"The password was not right. If you are sure that it is, the file may be damaged: its length does not fit the current format, as when a copy or a sync was interrupted. Type the password of “%@” again." = "The password was not right. If you are sure that it is, the file may be damaged: its length does not fit the current format, as when a copy or a sync was interrupted. Type the password of “%@” again.";
+"The password was not right. Type the password of “%@” again." = "The password was not right. Type the password of “%@” again.";
+"The password seems right, but the end of “%@” is missing, as when a copy, a download or a sync was interrupted, so Safe cannot open it as it is." = "The password seems right, but the end of “%@” is missing, as when a copy, a download or a sync was interrupted, so Safe cannot open it as it is.";
+"The password seems right, but the end of “%@” is missing, as when a copy, a download or a sync was interrupted, so Safe cannot export it as it is." = "The password seems right, but the end of “%@” is missing, as when a copy, a download or a sync was interrupted, so Safe cannot export it as it is.";
+"Export Readable Part writes what can be read, without the missing end, to a place you choose, not encrypted." = "Export Readable Part writes what can be read, without the missing end, to a place you choose, not encrypted.";
+"“%@” is damaged" = "“%@” is damaged";
+"Export Readable Part..." = "Export Readable Part...";
+"Type Another Password" = "Type Another Password";
+"“%@” was not exported" = "“%@” was not exported";
+"Safe tried every format it knows. If you are sure that the password is right, “%@” may be damaged, or an old file encrypted with RC4 (crypt.sh before version 1.4 wrote such files). Safe cannot check its content, so it cannot open it." = "Safe tried every format it knows. If you are sure that the password is right, “%@” may be damaged, or an old file encrypted with RC4 (crypt.sh before version 1.4 wrote such files). Safe cannot check its content, so it cannot open it.";
+"Export Readable Part writes what this password gives for the start of the file in the current format, as for a file whose end is missing (an interrupted copy or sync)." = "Export Readable Part writes what this password gives for the start of the file in the current format, as for a file whose end is missing (an interrupted copy or sync).";
+"Export as an Old RC4 File writes the file decrypted with RC4, which gives a result with any password. Either is written to a place you choose, not encrypted, for you to check: with a wrong password it is meaningless bytes." = "Export as an Old RC4 File writes the file decrypted with RC4, which gives a result with any password. Either is written to a place you choose, not encrypted, for you to check: with a wrong password it is meaningless bytes.";
+"Type It Again" = "Type It Again";
+"Export as an Old RC4 File..." = "Export as an Old RC4 File...";
+"The password was not right" = "The password was not right";
+"A damaged file in the current format, whose end is missing (an interrupted copy or sync): Safe writes the part that can be read." = "A damaged file in the current format, whose end is missing (an interrupted copy or sync): Safe writes the part that can be read.";
+"Damaged File (Readable Part)" = "Damaged File (Readable Part)";
+"An old file from crypt.sh before version 1.4: RC4 with a key from MD5." = "An old file from crypt.sh before version 1.4: RC4 with a key from MD5.";
+"crypt.sh Before 1.4 (MD5 Key)" = "crypt.sh Before 1.4 (MD5 Key)";
+"An old file from another tool: RC4 with a key from SHA-256." = "An old file from another tool: RC4 with a key from SHA-256.";
+"Another Tool (SHA-256 Key)" = "Another Tool (SHA-256 Key)";
+"How was “%@” written?" = "How was “%@” written?";
+"Safe can export what the password gives for “%@” read in one of these ways, not encrypted, to a place you choose. It cannot check the result, which is meaningless bytes with a wrong password, so it never shows or saves it. If you do not know, choose the first; if the copy is not usable, export it again another way." = "Safe can export what the password gives for “%@” read in one of these ways, not encrypted, to a place you choose. It cannot check the result, which is meaningless bytes with a wrong password, so it never shows or saves it. If you do not know, choose the first; if the copy is not usable, export it again another way.";
+"If the password is right but the result is not usable, Other Readings exports the file read as a damaged file whose end is missing, or an old RC4 file, for you to check." = "If the password is right but the result is not usable, Other Readings exports the file read as a damaged file whose end is missing, or an old RC4 file, for you to check.";
+"If the password is right but the result is not usable, Other Readings exports the file read as a damaged file whose end is missing, for you to check." = "If the password is right but the result is not usable, Other Readings exports the file read as a damaged file whose end is missing, for you to check.";
+"If the password is right but the result is not usable, Other Readings exports the file read as an old RC4 file, for you to check." = "If the password is right but the result is not usable, Other Readings exports the file read as an old RC4 file, for you to check.";
+"The content of “%@” does not look like text in any encoding, so Safe could not confirm the password. With a wrong password the content is meaningless bytes, as it most likely is here." = "The content of “%@” does not look like text in any encoding, so Safe could not confirm the password. With a wrong password the content is meaningless bytes, as it most likely is here.";
+"The content of “%@” does not start as %@ always does, so Safe could not confirm the password. With a wrong password the content is meaningless bytes, as it most likely is here." = "The content of “%@” does not start as %@ always does, so Safe could not confirm the password. With a wrong password the content is meaningless bytes, as it most likely is here.";
+"Other Readings..." = "Other Readings...";
+"Export Anyway..." = "Export Anyway...";
+"The password is probably not right" = "The password is probably not right";
+"If you are sure that the password is right, Export Anyway writes the result to a place you choose, not encrypted." = "If you are sure that the password is right, Export Anyway writes the result to a place you choose, not encrypted.";
+"The content of “%@” does not look like %@, so Safe could not confirm the password." = "The content of “%@” does not look like %@, so Safe could not confirm the password.";
+"“%@” is so short that Safe cannot tell its text from what a wrong password gives, so it could not confirm the password." = "“%@” is so short that Safe cannot tell its text from what a wrong password gives, so it could not confirm the password.";
+"Safe cannot check the content of a file like “%@”, so it could not confirm the password." = "Safe cannot check the content of a file like “%@”, so it could not confirm the password.";
+"With a wrong password the content is meaningless bytes; with the right one the file is simply unusual." = "With a wrong password the content is meaningless bytes; with the right one the file is simply unusual.";
+"Open shows it in the viewer, without changing anything." = "Open shows it in the viewer, without changing anything.";
+"Open" = "Open";
+"Open Read-Only shows it as text without changing anything; you can allow editing once you have checked that it is right." = "Open Read-Only shows it as text without changing anything; you can allow editing once you have checked that it is right.";
+"Open Read-Only" = "Open Read-Only";
+"Export writes the result to a place you choose, not encrypted." = "Export writes the result to a place you choose, not encrypted.";
+"Safe could not confirm the password" = "Safe could not confirm the password";
+"Continue" = "Continue";
+"Is this the right password?" = "Is this the right password?";
+"“%@” opened only as a file written %@, and Safe cannot tell whether the result is right. With a wrong password, or if the file is damaged, it would be meaningless bytes." = "“%@” opened only as a file written %@, and Safe cannot tell whether the result is right. With a wrong password, or if the file is damaged, it would be meaningless bytes.";
+"This file is in an encrypted volume. Its deleted plain copy stays readable in the volume's image to anyone with the volume's password; for protection by both passwords, encrypt files before you move them into the volume." = "This file is in an encrypted volume. Its deleted plain copy stays readable in the volume's image to anyone with the volume's password; for protection by both passwords, encrypt files before you move them into the volume.";
+"Some of these files are in an encrypted volume. Their deleted plain copies stay readable in the volume's image to anyone with the volume's password; for protection by both passwords, encrypt files before you move them into the volume." = "Some of these files are in an encrypted volume. Their deleted plain copies stay readable in the volume's image to anyone with the volume's password; for protection by both passwords, encrypt files before you move them into the volume.";
+"Safe could not confirm the password for this file, so it cannot tell whether the copy is right: with a wrong password it is meaningless bytes. Check the copy before you use it." = "Safe could not confirm the password for this file, so it cannot tell whether the copy is right: with a wrong password it is meaningless bytes. Check the copy before you use it.";
+"The file is damaged: its end is missing, so this copy is incomplete." = "The file is damaged: its end is missing, so this copy is incomplete.";
+"This is the start of the file as the password gives it in the current format, without the missing end. Safe could not confirm the password: with a wrong one it is meaningless bytes. Check the copy before you use it." = "This is the start of the file as the password gives it in the current format, without the missing end. Safe could not confirm the password: with a wrong one it is meaningless bytes. Check the copy before you use it.";
+"This file is in a synced folder, so the sync service has a plain copy of it, and keeps it in its trash and version history after the original is deleted here: delete it there too. Files are best encrypted before they go into a synced folder." = "This file is in a synced folder, so the sync service has a plain copy of it, and keeps it in its trash and version history after the original is deleted here: delete it there too. Files are best encrypted before they go into a synced folder.";
+"Some of these files are in a synced folder, so the sync service has plain copies of them, and keeps them in its trash and version history after the originals are deleted here: delete them there too. Files are best encrypted before they go into a synced folder." = "Some of these files are in a synced folder, so the sync service has plain copies of them, and keeps them in its trash and version history after the originals are deleted here: delete them there too. Files are best encrypted before they go into a synced folder.";
+"Please note (Safe says this once): a deleted file cannot be wiped reliably on an SSD, so the plain original may stay on the disk until it is overwritten, and Quick Look previews and the Spotlight index may keep copies of it; FileVault protects all of these if it is on. Time Machine backups and local snapshots keep older copies too." = "Please note (Safe says this once): a deleted file cannot be wiped reliably on an SSD, so the plain original may stay on the disk until it is overwritten, and Quick Look previews and the Spotlight index may keep copies of it; FileVault protects all of these if it is on. Time Machine backups and local snapshots keep older copies too.";
+"It is not a file encrypted by Safe or crypt.sh" = "It is not a file encrypted by Safe or crypt.sh";
+"The password is not right" = "The password is not right";
+"The file is damaged" = "The file is damaged";
+"The password is not right, or the file is damaged" = "The password is not right, or the file is damaged";
+"The file is damaged: its end is missing" = "The file is damaged: its end is missing";
+"The file changed on the disk in the meantime" = "The file changed on the disk in the meantime";
+"The check of the encrypted copy failed, so the original was kept" = "The check of the encrypted copy failed, so the original was kept";
+"%@ exists already" = "%@ exists already";
+"Safe's self-test failed: %@" = "Safe's self-test failed: %@";
+"text" = "text";
+"a .%@ file" = "a .%@ file";
+"in the current format" = "in the current format";
+"with AES-256 and an MD5 key, as old versions of openssl did" = "with AES-256 and an MD5 key, as old versions of openssl did";
+"with AES-256 and a SHA-256 key, without PBKDF2" = "with AES-256 and a SHA-256 key, without PBKDF2";
+"with RC4 and an MD5 key, as crypt.sh did before version 1.4" = "with RC4 and an MD5 key, as crypt.sh did before version 1.4";
+"with RC4 and a SHA-256 key" = "with RC4 and a SHA-256 key";
+
+/* SafeApp/Finder/ServicesProvider.swift */
+"Safe received no files." = "Safe received no files.";
+
+/* SafeApp/Help/HelpBook.swift */
+"The idea behind Safe" = "The idea behind Safe";
+"Passwords" = "Passwords";
+"Encrypting a file" = "Encrypting a file";
+"Opening and editing a text file" = "Opening and editing a text file";
+"Viewing PDFs and pictures, and exporting" = "Viewing PDFs and pictures, and exporting";
+"Locking" = "Locking";
+"Old files and the long term" = "Old files and the long term";
+"Settings and language" = "Settings and language";
+"Keyboard shortcuts" = "Keyboard shortcuts";
+"When something goes wrong" = "When something goes wrong";
+"Viewing and exporting" = "Viewing and exporting";
+"# Safe Help\n\nThe help text is missing from this copy of Safe (Contents/Resources/%@). Safe itself works as usual. Ask whoever installed Safe to build it again with app/scripts/build-app.sh. The same text is in the source code, in app/Resources/%@.\n\nIn short:\n\n- Encrypt a file: right-click it in the Finder and choose Encrypt with Safe.\n- Open an encrypted file: double-click it. Command-S saves it encrypted again.\n- Volumes: Window > Volumes (Command-0).\n- Safe locks after 10 minutes without input, and when the Mac sleeps or locks.\n- A lost password cannot be recovered." = "# Safe Help\n\nThe help text is missing from this copy of Safe (Contents/Resources/%@). Safe itself works as usual. Ask whoever installed Safe to build it again with app/scripts/build-app.sh. The same text is in the source code, in app/Resources/%@.\n\nIn short:\n\n- Encrypt a file: right-click it in the Finder and choose Encrypt with Safe.\n- Open an encrypted file: double-click it. Command-S saves it encrypted again.\n- Volumes: Window > Volumes (Command-0).\n- Safe locks after 10 minutes without input, and when the Mac sleeps or locks.\n- A lost password cannot be recovered.";
+
+/* SafeApp/Help/HelpWindowController.swift */
+"Search Help" = "Search Help";
+"Search the help text. Return finds the next place, Shift-Return the one before (⌘F)." = "Search the help text. Return finds the next place, Shift-Return the one before (⌘F).";
+"How often the search text occurs in the help." = "How often the search text occurs in the help.";
+"Safe, version %@" = "Safe, version %@";
+"Contents" = "Contents";
+"The sections of the help." = "The sections of the help.";
+"The sections of the help. Click one to go to it." = "The sections of the help. Click one to go to it.";
+
+/* SafeApp/Prompts/Alerts.swift */
+"OK" = "OK";
+"Type the %@ here." = "Type the %@ here.";
+"Go on with these values (Return)." = "Go on with these values (Return).";
+"Close this dialog without doing anything (Escape)." = "Close this dialog without doing anything (Escape).";
+"Open Safe Help about volumes." = "Open Safe Help about volumes.";
+"Name:" = "Name:";
+"The name of the new volume, which the Finder shows while it is open." = "The name of the new volume, which the Finder shows while it is open.";
+"Maximum size:" = "Maximum size:";
+"The most the volume can grow to, for example 500 MB, 2 GB or 1 TB. It takes only as much room as its files need." = "The most the volume can grow to, for example 500 MB, 2 GB or 1 TB. It takes only as much room as its files need.";
+
+/* SafeApp/Prompts/PasswordPrompt.swift */
+"This password has letters of a script other than Latin, or emoji. Password fields on the Mac, Safe's included, take only Latin keyboard layouts and no emoji, so to open the file later you would have to paste the password, and should clear the clipboard afterwards. To use it anyway, type or paste it twice again and click OK." = "This password has letters of a script other than Latin, or emoji. Password fields on the Mac, Safe's included, take only Latin keyboard layouts and no emoji, so to open the file later you would have to paste the password, and should clear the clipboard afterwards. To use it anyway, type or paste it twice again and click OK.";
+"The password must not be empty." = "The password must not be empty.";
+"The two passwords are not the same. Type them again." = "The two passwords are not the same. Type them again.";
+"The password contains a line break, probably from pasting. openssl and crypt.sh cannot use such a password; type or paste it again without it." = "The password contains a line break, probably from pasting. openssl and crypt.sh cannot use such a password; type or paste it again without it.";
+"The password contains a control character, such as a tab, probably from pasting. Type it again without it." = "The password contains a control character, such as a tab, probably from pasting. Type it again without it.";
+"The password is longer than %ld bytes, more than openssl's password prompt can take. Choose a shorter one." = "The password is longer than %ld bytes, more than openssl's password prompt can take. Choose a shorter one.";
+"Type the password. Safe does not show it, and forgets it after use." = "Type the password. Safe does not show it, and forgets it after use.";
+"Password:" = "Password:";
+"Type the new password. It cannot be recovered if it is lost, so keep it somewhere safe." = "Type the new password. It cannot be recovered if it is lost, so keep it somewhere safe.";
+"Type the same password again, so that a typing mistake cannot lock you out." = "Type the same password again, so that a typing mistake cannot lock you out.";
+"Again:" = "Again:";
+"Use this password (Return)." = "Use this password (Return).";
+"Open Safe Help about passwords." = "Open Safe Help about passwords.";
+
+/* SafeApp/Settings/Settings.swift */
+"Safe could not start again" = "Safe could not start again";
+
+/* SafeApp/Settings/SettingsWindowController.swift */
+"Open Safe Help about settings and the language." = "Open Safe Help about settings and the language.";
+"Settings" = "Settings";
+"Language:" = "Language:";
+"The language of Safe's menus, windows and messages. System follows the order of the languages in System Settings: German if German comes before English, otherwise English." = "The language of Safe's menus, windows and messages. System follows the order of the languages in System Settings: German if German comes before English, otherwise English.";
+"The menus, the Volumes window, the help and this window change at once. A text or a viewer that is open keeps its language until you open the file again; nothing is closed and no change is lost. The services in the Finder follow the language of macOS." = "The menus, the Volumes window, the help and this window change at once. A text or a viewer that is open keeps its language until you open the file again; nothing is closed and no change is lost. The services in the Finder follow the language of macOS.";
+"System" = "System";
+"Restart Safe" = "Restart Safe";
+"Quit Safe and start it again, so that the Open and Save dialogs and the About window are in the new language too. Only while no text, viewer or volume is open." = "Quit Safe and start it again, so that the Open and Save dialogs and the About window are in the new language too. Only while no text, viewer or volume is open.";
+"The Open and Save dialogs, the About window and the search field of the Help menu change when Safe starts again." = "The Open and Save dialogs, the About window and the search field of the Help menu change when Safe starts again.";
+"The Open and Save dialogs, the About window and the search field of the Help menu change the next time Safe starts. A text, a viewer or a volume is open, so Safe does not offer to restart now." = "The Open and Save dialogs, the About window and the search field of the Help menu change the next time Safe starts. A text, a viewer or a volume is open, so Safe does not offer to restart now.";
+"Notes about the language appear here." = "Notes about the language appear here.";
+
+/* SafeApp/Viewer/DocumentAlerts.swift */
+"Safe is still checking that it can read back what it writes. Try again in a moment." = "Safe is still checking that it can read back what it writes. Try again in a moment.";
+"Safe's self-test failed, so it does not encrypt or save anything: %@" = "Safe's self-test failed, so it does not encrypt or save anything: %@";
+"The file is not an encrypted file that Safe knows." = "The file is not an encrypted file that Safe knows.";
+"The password does not open the file." = "The password does not open the file.";
+"The encrypted file is damaged." = "The encrypted file is damaged.";
+"The password does not open the file, or the file is damaged." = "The password does not open the file, or the file is damaged.";
+"The file is damaged: its end is missing." = "The file is damaged: its end is missing.";
+"The file changed on disk since it was opened." = "The file changed on disk since it was opened.";
+"The encrypted file could not be read back correctly, so nothing was replaced." = "The encrypted file could not be read back correctly, so nothing was replaced.";
+"%@ exists already." = "%@ exists already.";
+"current format" = "current format";
+"AES-256-CBC, key from MD5" = "AES-256-CBC, key from MD5";
+"AES-256-CBC, key from SHA-256 without PBKDF2" = "AES-256-CBC, key from SHA-256 without PBKDF2";
+"RC4, key from MD5" = "RC4, key from MD5";
+"RC4, key from SHA-256" = "RC4, key from SHA-256";
+
+/* SafeApp/Viewer/ExportController.swift */
+"Not exported" = "Not exported";
+"That is the encrypted file itself, or another encrypted file. Choose another name." = "That is the encrypted file itself, or another encrypted file. Choose another name.";
+"The exported copy is not encrypted." = "The exported copy is not encrypted.";
+"%@ will be written to %@ as a normal file. Anyone who can read that folder can read it, and a sync service may upload it. Delete it when you no longer need it." = "%@ will be written to %@ as a normal file. Anyone who can read that folder can read it, and a sync service may upload it. Delete it when you no longer need it.";
+"That folder is in an encrypted volume: there, a deleted file stays readable in the volume's image to anyone with the volume's password. Choose a place outside the volume if you can, the Desktop for example." = "That folder is in an encrypted volume: there, a deleted file stays readable in the volume's image to anyone with the volume's password. Choose a place outside the volume if you can, the Desktop for example.";
+"Safe locked while the dialog was open, so nothing was written. Open or export the file again." = "Safe locked while the dialog was open, so nothing was written. Open or export the file again.";
+"The file was not exported" = "The file was not exported";
+
+/* SafeApp/Viewer/ViewerWindowController.swift */
+"Open Safe Help about the viewer and exporting." = "Open Safe Help about the viewer and exporting.";
+"Unlock PDF…" = "Unlock PDF…";
+"This PDF has a password of its own. Type it to show the pages." = "This PDF has a password of its own. Type it to show the pages.";
+"Export…" = "Export…";
+"Write an unencrypted copy of this file to a place you choose. Safe warns before it writes (⌥⌘E)." = "Write an unencrypted copy of this file to a place you choose. Safe warns before it writes (⌥⌘E).";
+"Close the viewer. Safe forgets the content (Escape)." = "Close the viewer. Safe forgets the content (Escape).";
+"macOS cannot show %@ from memory. You can export the original with Export…." = "macOS cannot show %@ from memory. You can export the original with Export….";
+"Decrypted in memory only." = "Decrypted in memory only.";
+"Saved in the current format %@." = "Saved in the current format %@.";
+"The previous version is kept as %@." = "The previous version is kept as %@.";
+"Safe could not confirm the password." = "Safe could not confirm the password.";
+"If this is what you expect, the password is right." = "If this is what you expect, the password is right.";
+"Old format: %@." = "Old format: %@.";
+"Save in Current Format writes the same content again in the current format and keeps the previous version as %@." = "Save in Current Format writes the same content again in the current format and keeps the previous version as %@.";
+"Encrypt the same content again in today's format, with the same password, and keep the old file as %@." = "Encrypt the same content again in today's format, with the same password, and keep the old file as %@.";
+"Another program or another Mac changed the file after it was opened. Close this window and open the file again." = "Another program or another Mac changed the file after it was opened. Close this window and open the file again.";
+"The PDF stays locked." = "The PDF stays locked.";
+
+/* SafeApp/Volumes/VolumeController.swift */
+"Choose the folder to turn into an encrypted volume." = "Choose the folder to turn into an encrypted volume.";
+"Choose" = "Choose";
+"Where should the encrypted volume be kept? A synced folder is a good place." = "Where should the encrypted volume be kept? A synced folder is a good place.";
+"Create" = "Create";
+"Choose an encrypted disk image (.dmg or .sparsebundle)." = "Choose an encrypted disk image (.dmg or .sparsebundle).";
+"Add" = "Add";
+"A volume is still open" = "A volume is still open";
+"cannot read %@" = "cannot read %@";
+"cannot read %@: %@" = "cannot read %@: %@";
+
+/* SafeApp/Volumes/VolumeFlows.swift */
+"Private" = "Private";
+"1 GB" = "1 GB";
+"The volume grows as files are added, up to the maximum size." = "The volume grows as files are added, up to the maximum size.";
+"New empty volume" = "New empty volume";
+"Give the maximum size as a number with MB, GB or TB, for example 1 GB. The smallest is %ld MB." = "Give the maximum size as a number with MB, GB or TB, for example 1 GB. The smallest is %ld MB.";
+"New volume “%@”" = "New volume “%@”";
+"Type a password for the new volume twice. Without it the volume cannot be opened." = "Type a password for the new volume twice. Without it the volume cannot be opened.";
+"Making the volume “%@” ..." = "Making the volume “%@” ...";
+"The volume was not made" = "The volume was not made";
+"Safe cannot make a volume from “%@”" = "Safe cannot make a volume from “%@”";
+"Safe makes an encrypted volume with a copy of everything in the folder, checks the copy file by file against the folder, and only then deletes the folder. If the check finds a difference, the folder is kept." = "Safe makes an encrypted volume with a copy of everything in the folder, checks the copy file by file against the folder, and only then deletes the folder. If the check finds a difference, the folder is kept.";
+"The folder is in a synced folder, so the sync service has plain copies of its files, and keeps them in its trash and version history after the folder is deleted here: delete them there too. Folders are best made into volumes before they go into a synced folder." = "The folder is in a synced folder, so the sync service has plain copies of its files, and keeps them in its trash and version history after the folder is deleted here: delete them there too. Folders are best made into volumes before they go into a synced folder.";
+"Make a volume from “%@”?" = "Make a volume from “%@”?";
+"Copying “%@” into a new encrypted volume ..." = "Copying “%@” into a new encrypted volume ...";
+"The folder was not changed." = "The folder was not changed.";
+"The folder was not deleted. The new volume is at %@; you can delete it, or add it to the list with Add Existing." = "The folder was not deleted. The new volume is at %@; you can delete it, or add it to the list with Add Existing.";
+"The folder was kept" = "The folder was kept";
+"Safe could not read the folder: %@." = "Safe could not read the folder: %@.";
+"The new volume does not hold exactly the files of “%@”." = "The new volume does not hold exactly the files of “%@”.";
+"Safe could not check the new volume: %@." = "Safe could not check the new volume: %@.";
+"“%@” changed while Safe was checking the new volume: another app or a sync service wrote to it. The volume may not hold the newest files, so the folder was not deleted%@. The new volume is at %@; you can delete it, or add it to the list with Add Existing." = "“%@” changed while Safe was checking the new volume: another app or a sync service wrote to it. The volume may not hold the newest files, so the folder was not deleted%@. The new volume is at %@; you can delete it, or add it to the list with Add Existing.";
+"The volume is ready, but the folder was not deleted completely" = "The volume is ready, but the folder was not deleted completely";
+"“%@” holds exactly the files of the folder “%@”, which was deleted. Open the volume to use the files." = "“%@” holds exactly the files of the folder “%@”, which was deleted. Open the volume to use the files.";
+"Please note: deleted files cannot be wiped reliably on an SSD. The unencrypted copies may stay on the disk until they are overwritten. Previews that the Finder made (Quick Look thumbnails) and the Spotlight index can also keep copies outside the volume. FileVault protects all of these if it is switched on. If the folder was in a synced folder, the sync service has plain copies and keeps them in its trash and version history; Time Machine backups and local snapshots keep older copies too. Delete those as well, or make volumes from folders before they go into a synced folder." = "Please note: deleted files cannot be wiped reliably on an SSD. The unencrypted copies may stay on the disk until they are overwritten. Previews that the Finder made (Quick Look thumbnails) and the Spotlight index can also keep copies outside the volume. FileVault protects all of these if it is switched on. If the folder was in a synced folder, the sync service has plain copies and keeps them in its trash and version history; Time Machine backups and local snapshots keep older copies too. Delete those as well, or make volumes from folders before they go into a synced folder.";
+"The volume is ready" = "The volume is ready";
+"Safe could not move the folder aside to delete it: %@. The volume holds all of its files, so you can delete the folder yourself." = "Safe could not move the folder aside to delete it: %@. The volume holds all of its files, so you can delete the folder yourself.";
+", and it is now at %@, because Safe could not move it back" = ", and it is now at %@, because Safe could not move it back";
+"Deleting the folder “%@” ..." = "Deleting the folder “%@” ...";
+"%@. The volume holds all of its files, so you can delete what is left of the folder yourself; it is at %@." = "%@. The volume holds all of its files, so you can delete what is left of the folder yourself; it is at %@.";
+"Safe did not finish deleting a folder" = "Safe did not finish deleting a folder";
+"When Safe made an encrypted volume from a folder, it was stopped (by a crash, a forced quit or a power cut) while it deleted the folder's unencrypted copy. The volume holds all of the files. What is left of the copy is at %@, hidden from the Finder, and it is not encrypted.\n\nDelete removes it. To keep it, choose Show in Finder and rename it." = "When Safe made an encrypted volume from a folder, it was stopped (by a crash, a forced quit or a power cut) while it deleted the folder's unencrypted copy. The volume holds all of the files. What is left of the copy is at %@, hidden from the Finder, and it is not encrypted.\n\nDelete removes it. To keep it, choose Show in Finder and rename it.";
+"Show in Finder" = "Show in Finder";
+"Deleting “%@” ..." = "Deleting “%@” ...";
+"The folder was not deleted completely" = "The folder was not deleted completely";
+"%@. What is left of it is at %@; you can delete it yourself." = "%@. What is left of it is at %@; you can delete it yourself.";
+"Checking the new volume against the folder ..." = "Checking the new volume against the folder ...";
+"It is not a folder." = "It is not a folder.";
+"Safe does not make volumes from the home folder, a folder that contains it, or a top-level folder of the disk." = "Safe does not make volumes from the home folder, a folder that contains it, or a top-level folder of the disk.";
+"It is a whole disk or volume, not a folder on one." = "It is a whole disk or volume, not a folder on one.";
+" and %ld more" = " and %ld more";
+"Some of its files have other names (hard links) outside the folder: %@. Deleting the folder would leave them unencrypted on the disk under those names. Make the volume with New Empty and copy the files into it instead, or remove the other names first." = "Some of its files have other names (hard links) outside the folder: %@. Deleting the folder would leave them unencrypted on the disk under those names. Make the volume with New Empty and copy the files into it instead, or remove the other names first.";
+"A volume is open inside the folder, at %@. Close it first." = "A volume is open inside the folder, at %@. Close it first.";
+"Choose another place" = "Choose another place";
+"The volume cannot be stored inside the folder it is made from, because the folder is deleted afterwards." = "The volume cannot be stored inside the folder it is made from, because the folder is deleted afterwards.";
+"Choose another name" = "Choose another name";
+"“%@” exists already there. Safe does not replace it." = "“%@” exists already there. Safe does not replace it.";
+"The volume was made but not added to the list" = "The volume was made but not added to the list";
+"%@. It is at %@; add it with Add Existing." = "%@. It is at %@; add it with Add Existing.";
+"“%@” is in the list already" = "“%@” is in the list already";
+"It is listed as “%@”." = "It is listed as “%@”.";
+"“%@” is not encrypted" = "“%@” is not encrypted";
+"Safe keeps only encrypted volumes in its list." = "Safe keeps only encrypted volumes in its list.";
+"Safe cannot read “%@”" = "Safe cannot read “%@”";
+"Remove “%@” from the list?" = "Remove “%@” from the list?";
+"The volume itself stays where it is, at %@, and is not deleted. You can add it again with Add Existing." = "The volume itself stays where it is, at %@, and is not deleted. You can add it again with Add Existing.";
+"Remove" = "Remove";
+"“%@” was not removed" = "“%@” was not removed";
+"The setting was not saved" = "The setting was not saved";
+"“%@” cannot be found" = "“%@” cannot be found";
+"There is nothing at %@." = "There is nothing at %@.";
+"%@ is not running" = "%@ is not running";
+"%@ keeps the folder of “%@” in sync. As it is not running, this copy of the volume may not be the latest one. Open it anyway?" = "%@ keeps the folder of “%@” in sync. As it is not running, this copy of the volume may not be the latest one. Open it anyway?";
+"Open Anyway" = "Open Anyway";
+"Type the password of the volume “%@”." = "Type the password of the volume “%@”.";
+"Opening “%@” ..." = "Opening “%@” ...";
+"“%@” was not opened" = "“%@” was not opened";
+"Closing “%@” ..." = "Closing “%@” ...";
+"“%@” is still open" = "“%@” is still open";
+"Files on it are in use. Close them, or quit the apps that use them, and try again. (%@)" = "Files on it are in use. Close them, or quit the apps that use them, and try again. (%@)";
+"Changing the password does not change the volume's key: a copy of the volume kept from before (in a sync service's version history, a backup or on another Mac) still opens with the old password." = "Changing the password does not change the volume's key: a copy of the volume kept from before (in a sync service's version history, a backup or on another Mac) still opens with the old password.";
+"Type the current password of “%@”." = "Type the current password of “%@”.";
+"Change the password of “%@”" = "Change the password of “%@”";
+"New password for “%@”" = "New password for “%@”";
+"Type the new password twice." = "Type the new password twice.";
+"Changing the password of “%@” ..." = "Changing the password of “%@” ...";
+"The password of “%@” was changed" = "The password of “%@” was changed";
+"The volume now opens with the new password. Its key stays the same, so a copy of the volume kept from before (in a sync service's version history, a backup or another Mac) still opens with the old password. If the old password may be known to someone, make a new volume (New Empty) and move the files into it." = "The volume now opens with the new password. Its key stays the same, so a copy of the volume kept from before (in a sync service's version history, a backup or another Mac) still opens with the old password. If the old password may be known to someone, make a new volume (New Empty) and move the files into it.";
+"The current password was not right. Type the current password of “%@” again." = "The current password was not right. Type the current password of “%@” again.";
+"The password was not changed" = "The password was not changed";
+"“%@” is open at another place" = "“%@” is open at another place";
+"It is open at %@, not at %@, where the file in the editor was. Close it in the Volumes window, then try again." = "It is open at %@, not at %@, where the file in the editor was. Close it in the Volumes window, then try again.";
+"Type the password of the volume “%@”. Safe opens it at the same place as before, so that %@ can be saved there." = "Type the password of the volume “%@”. Safe opens it at the same place as before, so that %@ can be saved there.";
+"Open “%@” again" = "Open “%@” again";
+"When Safe locked, it could not close %@, because files on it were in use in another app. It is still open. Save and close the files, then close the volume in the Volumes window." = "When Safe locked, it could not close %@, because files on it were in use in another app. It is still open. Save and close the files, then close the volume in the Volumes window.";
+"Give the volume a name." = "Give the volume a name.";
+"The name must not contain / or : and must not start with a dot." = "The name must not contain / or : and must not start with a dot.";
+"The name is too long." = "The name is too long.";
+
+/* SafeApp/Volumes/VolumesWindowController.swift */
+"Check that this app is running before opening:" = "Check that this app is running before opening:";
+"Safe Volumes" = "Safe Volumes";
+"New Empty..." = "New Empty...";
+"New from Folder..." = "New from Folder...";
+"Add Existing..." = "Add Existing...";
+"Remove from List" = "Remove from List";
+"Change Password..." = "Change Password...";
+"Encrypted volumes are disk images in Apple's standard format. Open one to use its files in the Finder. Safe closes the volumes it opened after 10 minutes without use and when the Mac sleeps. To encrypt a single file, right-click it in the Finder and choose Encrypt with Safe (under Quick Actions or Services); double-click a .crypt file to open it." = "Encrypted volumes are disk images in Apple's standard format. Open one to use its files in the Finder. Safe closes the volumes it opened after 10 minutes without use and when the Mac sleeps. To encrypt a single file, right-click it in the Finder and choose Encrypt with Safe (under Quick Actions or Services); double-click a .crypt file to open it.";
+"Name" = "Name";
+"The name Safe shows for the volume." = "The name Safe shows for the volume.";
+"Location" = "Location";
+"Where the volume's disk image is stored." = "Where the volume's disk image is stored.";
+"State" = "State";
+"Open, Closed, or Not found if nothing is at the location any more." = "Open, Closed, or Not found if nothing is at the location any more.";
+"Your encrypted volumes. Double-click a volume, or select it and press Return, to open it." = "Your encrypted volumes. Double-click a volume, or select it and press Return, to open it.";
+"Before opening this volume, check that the app keeping its folder in sync is running, and warn if it is not." = "Before opening this volume, check that the app keeping its folder in sync is running, and warn if it is not.";
+"for example Nextcloud" = "for example Nextcloud";
+"The name of the sync app, for example Nextcloud. Safe warns before opening the volume if no app of this name is running." = "The name of the sync app, for example Nextcloud. Safe warns before opening the volume if no app of this name is running.";
+"[state] Open" = "Open";
+"Open at %@" = "Open at %@";
+"[state] Closed" = "Closed";
+"[state] Not found" = "Not found";
+"There is nothing at this location." = "There is nothing at this location.";
+"Safe is checking its encryption (self-test) ..." = "Safe is checking its encryption (self-test) ...";
+"The self-test failed, so Safe will not encrypt or save files: %@" = "The self-test failed, so Safe will not encrypt or save files: %@";
+"Messages about Safe's self-test, which checks its encryption at every start, appear here." = "Messages about Safe's self-test, which checks its encryption at every start, appear here.";
+"New Empty Volume..." = "New Empty Volume...";
+"New Volume from Folder..." = "New Volume from Folder...";
+"Add Existing Volume..." = "Add Existing Volume...";
+"Open Volume" = "Open Volume";
+"Close Volume" = "Close Volume";
+"Make a new, empty encrypted volume. You choose its name, maximum size, place and password (⌘N)." = "Make a new, empty encrypted volume. You choose its name, maximum size, place and password (⌘N).";
+"Make an encrypted volume from a folder. Safe checks the copy, then deletes the folder (⇧⌘N)." = "Make an encrypted volume from a folder. Safe checks the copy, then deletes the folder (⇧⌘N).";
+"Add an encrypted disk image that is on the disk already, such as one made with Disk Utility (⇧⌘A)." = "Add an encrypted disk image that is on the disk already, such as one made with Disk Utility (⇧⌘A).";
+"Open the selected volume with its password and show it in the Finder (⌘↩)." = "Open the selected volume with its password and show it in the Finder (⌘↩).";
+"Close the selected volume. If a file on it is still in use, it stays open and Safe says so (⌘E)." = "Close the selected volume. If a file on it is still in use, it stays open and Safe says so (⌘E).";
+"Change the password of the selected volume while it is closed. A copy of the volume kept from before still opens with the old password." = "Change the password of the selected volume while it is closed. A copy of the volume kept from before still opens with the old password.";
+"Remove the selected volume from this list. The volume itself stays on the disk and is not deleted (or press Delete in the list)." = "Remove the selected volume from this list. The volume itself stays on the disk and is not deleted (or press Delete in the list).";
+
+/* SafeApp/main.swift */
+"Safe cannot start" = "Safe cannot start";
+"It could not switch off its own network access: %@" = "It could not switch off its own network access: %@";
+
+/* SafeCore/AppLogic/EditorLogic.swift */
+"Locked. The unsaved changes are kept; type the file's password to show them again." = "Locked. The unsaved changes are kept; type the file's password to show them again.";
+"Text in %@." = "Text in %@.";
+"Saved %@, the previous version is kept as %@." = "Saved %@, the previous version is kept as %@.";
+"Saved %@." = "Saved %@.";
+"Opened from an old format (%@); saving writes the current format." = "Opened from an old format (%@); saving writes the current format.";
+
+/* SafeCore/AppLogic/TextCoding.swift */
+"UTF-8 with a byte order mark" = "UTF-8 with a byte order mark";
+
+/* SafeCore/Files/CryptFile.swift */
+"%ld byte" = "%ld byte";
+"%ld bytes" = "%ld bytes";
+"It is larger than %@, too large to encrypt as one file. Put it in an encrypted volume instead: make one in Safe's Volumes window and move the file there" = "It is larger than %@, too large to encrypt as one file. Put it in an encrypted volume instead: make one in Safe's Volumes window and move the file there";
+"%@ is larger than %@, too large to encrypt as one file. Put it in an encrypted volume instead: make one in Safe's Volumes window and move the file there" = "%@ is larger than %@, too large to encrypt as one file. Put it in an encrypted volume instead: make one in Safe's Volumes window and move the file there";
+"%@ has other names (hard links), which would keep it unencrypted on the disk after the original is deleted, so it was not encrypted" = "%@ has other names (hard links), which would keep it unencrypted on the disk after the original is deleted, so it was not encrypted";
+"%@ is not a regular file, so it cannot be encrypted" = "%@ is not a regular file, so it cannot be encrypted";
+"%@ has a resource fork, which an encrypted file cannot keep, so it was not encrypted. Put it in an encrypted volume instead" = "%@ has a resource fork, which an encrypted file cannot keep, so it was not encrypted. Put it in an encrypted volume instead";
+"%@ changed while it was being encrypted, so it was kept; %@.crypt holds the earlier version" = "%@ changed while it was being encrypted, so it was kept; %@.crypt holds the earlier version";
+"%@.crypt was written, but cannot delete %@: %@" = "%@.crypt was written, but cannot delete %@: %@";
+"cannot save %@, nothing changed: %@" = "cannot save %@, nothing changed: %@";
+
+/* SafeCore/Files/FileIO.swift */
+"cannot remove %@: %@" = "cannot remove %@: %@";
+"cannot flush %@: %@" = "cannot flush %@: %@";
+"cannot rename %@ to %@: %@" = "cannot rename %@ to %@: %@";
+
+/* SafeCore/Volumes/DiskImage.swift */
+"The maximum size must be at least 1 MB." = "The maximum size must be at least 1 MB.";
+"%@ is not a folder." = "%@ is not a folder.";
+"The volume cannot be saved inside the folder it is made from." = "The volume cannot be saved inside the folder it is made from.";
+"%@ is in use; the volume needs a new or empty folder." = "%@ is in use; the volume needs a new or empty folder.";
+"%@ is already open at %@." = "%@ is already open at %@.";
+"%@ is already open." = "%@ is already open.";
+"%@ holds no volume that macOS can mount." = "%@ holds no volume that macOS can mount.";
+"%@ is open. Close it before changing its password." = "%@ is open. Close it before changing its password.";
+"hdiutil isencrypted gave no answer for %@." = "hdiutil isencrypted gave no answer for %@.";
+"The name of the volume's file must end in .sparsebundle." = "The name of the volume's file must end in .sparsebundle.";
+"The folder %@ does not exist." = "The folder %@ does not exist.";
+"The volume needs a name." = "The volume needs a name.";
+"The password must not contain a NUL character." = "The password must not contain a NUL character.";
+"There is no disk image at %@." = "There is no disk image at %@.";
+"hdiutil reported no error, but %@ was not made." = "hdiutil reported no error, but %@ was not made.";
+
+/* SafeCore/Volumes/FolderVerifier.swift */
+"%@ is missing in %@." = "%@ is missing in %@.";
+"%@ is in %@ but not in %@." = "%@ is in %@ but not in %@.";
+"%@ has %ld bytes in %@ and %ld bytes in %@." = "%@ has %ld bytes in %@ and %ld bytes in %@.";
+"The link %@ points to %@ in %@ and to %@ in %@." = "The link %@ points to %@ in %@ and to %@ in %@.";
+"%@ is not the same kind of item in %@ and %@." = "%@ is not the same kind of item in %@ and %@.";
+"%@ has different contents in %@ and %@." = "%@ has different contents in %@ and %@.";
+"Cannot read the folder %@: %@" = "Cannot read the folder %@: %@";
+"Cannot read %@: %@" = "Cannot read %@: %@";
+
+/* SafeCore/Volumes/Hdiutil.swift */
+"hdiutil failed with status %ld" = "hdiutil failed with status %ld";
+"hdiutil printed no readable property list" = "hdiutil printed no readable property list";
+"cannot run hdiutil: %@" = "cannot run hdiutil: %@";
+
+/* SafeCore/Volumes/VolumeStore.swift */
+"%@ is not in the list of volumes." = "%@ is not in the list of volumes.";
+"Cannot make the folder %@: %@" = "Cannot make the folder %@: %@";
+"Cannot keep the unreadable %@: %@" = "Cannot keep the unreadable %@: %@";
+"Cannot encode the list of volumes: %@" = "Cannot encode the list of volumes: %@";
+"Cannot write %@: %@" = "Cannot write %@: %@";

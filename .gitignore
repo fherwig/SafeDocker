@@ -9,6 +9,22 @@ _*
 
 # never commit a safe or what is in it
 *.dmg
+*.sparsebundle
+*.sparseimage
 *.crypt*
 safe.txt*
 \#*#
+
+# build products: swift builds go to ~/Library/Caches/SafeDocker-build
+# (--scratch-path), outside the synced folder, see docs/safe-app; these
+# catch a build without it, editor indexes and the assembled app
+.build/
+.swiftpm/
+.index-build/
+app/.build/
+app/.swiftpm/
+app/dist/
+.claude/worktrees/
+
+# Python byte code, if a tool is imported by hand
+__pycache__/

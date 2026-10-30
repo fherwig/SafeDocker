@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The installer of Safe.app, made by app/scripts/make-pkg.sh, which fills in
+     the version. A per-user install: enable_currentUserHome puts the payload
+     under the home folder, so the component's /Applications becomes
+     ~/Applications. The other two domains are off, so the installer cannot be
+     talked into a system-wide install, which would need an administrator.
+     hostArchitectures names both kinds of Mac, so that an Apple silicon Mac does
+     not offer to install Rosetta first. No scripts: after the install the user
+     starts Safe once, so that the Finder learns its services. -->
+<installer-gui-script minSpecVersion="2">
+    <title>Safe</title>
+    <options customize="never" require-scripts="false" hostArchitectures="arm64,x86_64"/>
+    <domains enable_anywhere="false" enable_currentUserHome="true" enable_localSystem="false"/>
+    <allowed-os-versions>
+        <os-version min="13.0"/>
+    </allowed-os-versions>
+    <choices-outline>
+        <line choice="safe"/>
+    </choices-outline>
+    <choice id="safe" visible="false">
+        <pkg-ref id="io.github.fherwig.safedocker.pkg"/>
+    </choice>
+    <pkg-ref id="io.github.fherwig.safedocker.pkg" version="__VERSION__">component.pkg</pkg-ref>
+</installer-gui-script>

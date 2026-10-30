@@ -1,0 +1,6 @@
+# The Docker image of the terminal tool, pinned by its digest (requirement G5).
+# This is the image fherwig/safe:22.0 as pushed to Docker Hub on 2026-10-25,
+# with OpenSSL 3.0.22 on Debian 12. docker pull with this line gets exactly
+# that image, even if the tag 22.0 is moved later. app/scripts/time-capsule.sh
+# compares the local image with it and saves the image as an archive file.
+fherwig/safe@sha256:3242d3d80d8e2c4a0085ff90cea712a19363f37c82f32bca4a421cdcf3ba6be7

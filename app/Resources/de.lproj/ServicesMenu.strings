@@ -1,0 +1,5 @@
+/* Safe.app, Deutsch: the Finder's services (Info.plist, NSServices). They follow the language
+   of macOS, not Safe's own setting, because the Finder shows them. */
+"Encrypt with Safe" = "Mit Safe verschlüsseln";
+"Open with Safe" = "Mit Safe öffnen";
+"Export with Safe" = "Mit Safe exportieren";

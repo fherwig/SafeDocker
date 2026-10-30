@@ -1,0 +1,4 @@
+/* Safe.app, English: what the Finder shows from Info.plist. */
+"CFBundleName" = "Safe";
+"CFBundleDisplayName" = "Safe";
+"Encrypted file" = "Encrypted file";
